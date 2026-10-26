@@ -32,9 +32,11 @@ Required fields: `plate_id,well,sample_id,value,control`. Well positions are A01
 ## What is calculated
 
 - Counts of measured wells and control roles; missing positions remain unmeasured.
-- Z-prime: `1 - 3*(sample_SD_positive + sample_SD_negative)/abs(mean_positive - mean_negative)`. Requires at least two wells of each control role. Equal control means make it undefined. The displayed 0.5 reference is exploratory and not a universal acceptance threshold.
+- Z-prime: `1 - 3*(sample_SD_positive + sample_SD_negative)/abs(mean_positive - mean_negative)`. Requires at least two wells of each control role. Equal control means make it undefined. Multiple control IDs within either role cause the pooled score to be withheld. The displayed 0.5 reference is exploratory and not a universal acceptance threshold.
 - Whether each sample ID spans edge and interior positions. An edge is row A/H or column 1/12.
 - An equal-weight mean of within-ID edge-minus-interior contrasts for IDs represented in both zones, including controls. No pooled position comparison is substituted when matching is impossible.
+- Separate control-only, within-ID edge/interior comparisons, so candidate sample responses do not drive the control check.
+- Per-ID means and sample standard deviations within each position zone, with referenced wells. A single well has no estimable SD; it is not displayed as zero. Small groups still give uncertain variability estimates.
 - Sample IDs lacking within-plate replication.
 
 These descriptive checks do not establish a causal artifact, biological activity, statistical significance, or assay validity. No measurements are corrected and no hits are ranked.

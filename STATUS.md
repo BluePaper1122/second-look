@@ -12,14 +12,14 @@ Updated October 26, 2026 (America/Chicago).
 - Human review before layout export; professional handoff export; formula-safe CSV identifiers.
 - Optional restrained Pip notes; revised descriptive, task-focused interface after user feedback.
 - Nebius runtime integration with NVIDIA model selected by environment. Output gate accepts only known finding codes; explicit unavailable/error states.
-- 12 unit tests pass; 140 held-out synthetic integrity cases pass. These do not establish scientific accuracy or model usefulness.
+- 16 unit tests pass; 140 held-out synthetic integrity cases pass. These do not establish scientific accuracy or model usefulness.
 - Browser verified: example loading, plate inspection, follow-up allocation, human review gate.
 
 ## Required before submission
 
 1. Verify live NVIDIA Nemotron with a real Nebius key and available model. Neither is configured in the current environment. Do not ask the user to paste keys into chat; use secure local environment configuration.
 2. Expand model contribution beyond prioritization: approved analysis-tool requests and evidence-linked follow-up choices. Compare against fixed QC baseline using blinded, independently labeled scenarios; do not overstate the current integration.
-3. Add control-only position contrasts and within-ID replicate variability summaries. Keep descriptive scope and disclose small sample sizes and layout assumptions.
+3. Completed: control-only within-ID position contrasts and within-zone replicate means/SD, displayed in an accessible table and included in handoff exports. Pooled Z-prime is withheld for mixed control identities. Four new tests independently check these behaviors; scientific validity still requires expert review.
 4. Improve CSV header parsing, export verification, responsive testing, and accessibility. Controls are locked during requests to prevent input/output mismatches; changes to sample selections or budget clear previous layouts. Audit stale results after input changes or out-of-order requests.
 5. Verify a permission-compatible real plate dataset and ground-truth limitations. Time-box discovery; retain explicit synthetic-only status if unavailable.
 6. Add production hosting, TLS, rate/concurrency/cost limits, data notice, and judge-access persistence. Do not expose the development server publicly.

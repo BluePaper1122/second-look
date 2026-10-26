@@ -35,6 +35,24 @@ class AssayTests(unittest.TestCase):
             for f in report['findings']:
                 for ref in f['evidence']: self.assertIn(ref,report['facts'])
             json.dumps(report, allow_nan=False)
+    def test_distinct_control_materials_not_pooled(self):
+        rows=parse_csv('plate_id,well,sample_id,value,control\np,A01,n1,0,negative\np,B02,n2,20,negative\np,A02,p,40,positive\np,B03,p,42,positive\n')
+        report=inspect(rows)
+        self.assertNotIn('z_prime',report['facts'])
+        self.assertIn('mixed_controls',[f['code'] for f in report['findings']])
+    def test_control_contrast_excludes_candidate_signal(self):
+        rows=parse_csv('plate_id,well,sample_id,value,control\np,A01,n,12,negative\np,B02,n,10,negative\np,A02,s,1000,sample\np,B03,s,0,sample\n')
+        report=inspect(rows)
+        self.assertEqual(report['facts']['negative_matched_edge_difference']['value'],2)
+    def test_within_zone_sd_excludes_between_zone_shift(self):
+        rows=parse_csv('plate_id,well,sample_id,value,control\np,A01,s,101,sample\np,A02,s,103,sample\np,B02,s,1,sample\np,B03,s,3,sample\n')
+        report=inspect(rows)
+        self.assertEqual(len(report['replicate_summaries']),2)
+        for summary in report['replicate_summaries']:
+            self.assertAlmostEqual(report['facts'][summary['evidence'][-1]]['value'],math.sqrt(2))
+    def test_single_well_sd_not_zero(self):
+        report=inspect(parse_csv('plate_id,well,sample_id,value,control\np,A01,s,3,sample\n'))
+        self.assertEqual(len(report['replicate_summaries'][0]['evidence']),2)
     def test_plan_constraints_many_budgets(self):
         for n in range(1,17):
             for seed in (1,2,80):

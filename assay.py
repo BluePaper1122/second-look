@@ -80,6 +80,8 @@ def inspect(rows):
         finding('partial', 'note', 'Partial plate', 'Unmeasured wells remain empty. They are never replaced with zero.', ['well_count'])
     if any(len(groups[x]) < 2 for x in ('positive', 'negative')):
         finding('controls', 'warning', 'Control information is limited', 'At least two positive and two negative controls are needed for this prototype’s Z-prime calculation. More controls and assay-specific review are needed for reliable QC.', ['positive_count', 'negative_count'])
+    elif any(len({r['sample_id'] for r in groups[x]}) != 1 for x in ('positive', 'negative')):
+        finding('mixed_controls', 'warning', 'Control identities need separate review', 'Multiple control IDs share a role. Z-prime is withheld because pooling distinct control materials could mix their biological differences with measurement variability. Review each control pair separately.', ['positive_count', 'negative_count'])
     else:
         p, n = ([r['value'] for r in groups[x]] for x in ('positive', 'negative'))
         sep = abs(st.mean(p) - st.mean(n))
@@ -116,11 +118,45 @@ def inspect(rows):
         finding('spatial', 'note', 'Matched position comparison available', 'This is the mean within-sample edge-minus-interior difference, including controls. It is descriptive, unadjusted for row, batch, or other factors, and does not establish a cause.', ['matched_edge_difference', 'matched_id_count'])
     else:
         finding('no_spatial_comparison', 'warning', 'No matched position comparison', 'No sample or control ID spans both edge and interior positions. A pooled comparison would mix position with sample identity, so it is withheld.', ['uncrossed_sample_count'])
+    # Show control-only evidence separately from candidate sample responses.
+    for role in ('negative', 'positive'):
+        contrasts, wells = [], []
+        for (group_role, sid), rs in all_groups.items():
+            if group_role != role:
+                continue
+            e, i = ([r['value'] for r in rs if edge(r['well']) == flag] for flag in (True, False))
+            if e and i:
+                contrasts.append(st.mean(e) - st.mean(i))
+                wells.extend(r['well'] for r in rs)
+        if contrasts:
+            key = role + '_matched_edge_difference'
+            fact(key, st.mean(contrasts), 'measurement units; equal weight per matched control ID', wells)
+            finding(role + '_position', 'note', role.capitalize() + ' control position comparison', 'Within-control edge-minus-interior differences are averaged only across control IDs measured in both zones. A difference is an observation; it does not identify the cause or justify automatic correction.', [key])
+    # Sample SD within each position zone avoids conflating a zone shift with
+    # within-zone variability. Small groups still provide uncertain estimates.
+    replicate_summaries = []
+    for index, ((role, sid), rs) in enumerate(sorted(all_groups.items())):
+        for flag in (True, False):
+            selected = [r for r in rs if edge(r['well']) == flag]
+            if not selected:
+                continue
+            zone = 'edge' if flag else 'interior'
+            prefix = f'replicate_{index}_{zone}'
+            refs = []
+            for suffix, value, units in [('count', len(selected), 'wells'), ('mean', st.mean(r['value'] for r in selected), 'measurement units')]:
+                key = prefix + '_' + suffix
+                fact(key, value, units, [r['well'] for r in selected])
+                refs.append(key)
+            if len(selected) >= 2:
+                key = prefix + '_sd'
+                fact(key, st.stdev(r['value'] for r in selected), 'measurement units; sample standard deviation', [r['well'] for r in selected])
+                refs.append(key)
+            replicate_summaries.append({'sample_id': sid, 'role': role, 'zone': zone, 'evidence': refs})
     singles = [sid for sid, rs in samples.items() if len(rs) < 2]
     fact('unreplicated_sample_count', len(singles), 'sample IDs', [r['well'] for r in groups['sample'] if r['sample_id'] in singles])
     if singles:
         finding('replicates', 'warning', 'Some samples lack within-plate replication', 'One measurement cannot estimate within-sample variability. Repeated wells are technical replicates unless independent biological replication is documented.', ['unreplicated_sample_count'])
-    return {'facts': facts, 'findings': findings, 'samples': sorted(samples), 'scope': 'Exploratory single-plate QC. No automatic correction, significance tests, hit ranking, or biological validation.'}
+    return {'facts': facts, 'findings': findings, 'replicate_summaries': replicate_summaries, 'samples': sorted(samples), 'scope': 'Exploratory single-plate QC. No automatic correction, significance tests, hit ranking, or biological validation.'}
 
 def plan(sample_ids, budget, seed=11):
     if isinstance(budget, bool) or not isinstance(budget, int) or not 8 <= budget <= 96:

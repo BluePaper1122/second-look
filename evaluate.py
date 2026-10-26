@@ -9,7 +9,7 @@ def main():
         for seed in range(100, 120):
             report = inspect(parse_csv(example(kind, seed)))
             codes = {f['code'] for f in report['findings']}
-            checks = {'finite_serializable_report': True, 'evidence_references_resolve': all(e in report['facts'] for f in report['findings'] for e in f['evidence'])}
+            checks = {'finite_serializable_report': True, 'evidence_references_resolve': all(e in report['facts'] for f in report['findings'] + report['replicate_summaries'] for e in f['evidence'])}
             if kind == 'confounded': checks['confounding_disclosed'] = 'confounding' in codes
             if kind == 'missing_controls': checks['missing_controls_disclosed'] = 'controls' in codes
             layout = plan(report['samples'][:2],24,seed)
