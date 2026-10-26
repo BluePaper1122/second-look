@@ -14,6 +14,12 @@ class AssayTests(unittest.TestCase):
         header = 'plate_id,well,sample_id,value,control\n'
         for rows in ('p,A01,s,nan,sample\n', 'p,A13,s,2,sample\n', 'p,A01,s,2,sample\np,a1,s,2,sample\n', 'p,A01,s,inf,sample\n', 'p,A01,s,2,unknown\n', 'p,A01,s,2,sample\nq,A02,s,2,sample\n'):
             with self.subTest(rows=rows), self.assertRaises(ValueError): parse_csv(header+rows)
+    def test_unrepresentable_control_score_withheld(self):
+        rows=parse_csv('plate_id,well,sample_id,value,control\np,A01,p,1e100,positive\np,B02,p,-1e100,positive\np,A02,n,1e-300,negative\np,B03,n,1e-300,negative\n')
+        report=inspect(rows)
+        self.assertNotIn('z_prime',report['facts'])
+        self.assertIn('score_range',[f['code'] for f in report['findings']])
+        json.dumps(report,allow_nan=False)
     def test_mapping_and_normalization(self):
         rows = parse_csv('p,w,s,v,c\nx,a1,abc,4,sample\n',dict(zip(('plate_id','well','sample_id','value','control'),('p','w','s','v','c'))))
         self.assertEqual(rows[0]['well'], 'A01')
@@ -79,7 +85,7 @@ class AssayTests(unittest.TestCase):
         class Response:
             def __enter__(self): return self
             def __exit__(self,*args): pass
-            def read(self): return json.dumps({'choices':[{'message':{'content':'{"priorities":["invented"]}'}}]}).encode()
+            def read(self, limit=None): return json.dumps({'choices':[{'message':{'content':'{"priorities":["invented"]}'}}]}).encode()
         with patch.dict('os.environ',{'NEBIUS_API_KEY':'test','NEBIUS_MODEL':'nvidia/test'}), patch('urllib.request.urlopen',return_value=Response()):
             with self.assertRaises(ValueError): model_review(inspect(parse_csv(example())))
 

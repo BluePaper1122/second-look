@@ -3,3 +3,5 @@
 h1{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;font-size:clamp(32px,4vw,46px);font-weight:600;letter-spacing:-1.3px;line-height:1.18}h2{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;font-size:24px;font-weight:600;letter-spacing:-.5px}.eyebrow,.step{letter-spacing:1.1px}.lede{font-size:16px;max-width:600px}.intro{padding:20px 0 30px;gap:40px}.pip{border-radius:10px;background:#eef0e7;padding:20px;text-align:left}.pip-face{font-size:23px}.pip p{font-size:13px}.card{box-shadow:none}footer{font-family:ui-sans-serif,system-ui;font-size:14px;color:var(--muted)}
 
 .table-wrap{overflow-x:auto;margin-top:15px}table{width:100%;border-collapse:collapse;font-size:12px}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}thead{background:#eef1e8}tbody th{font-weight:500;overflow-wrap:anywhere}
+
+.decision{border:1px solid var(--line);border-left:3px solid var(--green);border-radius:8px;background:#f3f5ed;padding:18px;margin:20px 0}.decision h3{font-size:17px;margin:0 0 8px}.decision p{font-size:13px;margin:6px 0}.decision li{margin:15px 0}.decision li strong{font-size:13px}

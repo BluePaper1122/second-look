@@ -6,6 +6,7 @@ import random
 import re
 import statistics as st
 from collections import defaultdict
+from errors import AppError
 
 REQUIRED = ('plate_id', 'well', 'sample_id', 'value', 'control')
 CONTROLS = {'sample', 'negative', 'positive'}
@@ -16,7 +17,17 @@ def edge(well):
 def parse_csv(text, mapping=None):
     if not isinstance(text, str) or len(text.encode()) > 1_000_000:
         raise ValueError('Upload a CSV smaller than 1 MB.')
-    reader = csv.DictReader(io.StringIO(text.lstrip('\ufeff')))
+    try:
+        records = list(csv.reader(io.StringIO(text.lstrip('\ufeff')), strict=True))
+    except csv.Error:
+        raise AppError('invalid_csv', 'The CSV contains an invalid quoted field or an oversized field. Export it again as UTF-8 CSV and retry.') from None
+    records = [row for row in records if row]
+    if not records:
+        raise ValueError('The CSV has no measurements.')
+    headers = records[0]
+    if len(headers) > 100 or any(not h.strip() or len(h) > 120 for h in headers):
+        raise ValueError('Use up to 100 named columns; each header must be at most 120 characters.')
+    reader = csv.DictReader(io.StringIO(text.lstrip('\ufeff')), strict=True)
     if mapping is not None and not isinstance(mapping, dict):
         raise ValueError('Column mapping must be an object.')
     mapping = mapping if mapping is not None else {k: k for k in REQUIRED}
@@ -87,8 +98,11 @@ def inspect(rows):
         sep = abs(st.mean(p) - st.mean(n))
         if sep:
             z = 1 - 3 * (st.stdev(p) + st.stdev(n)) / sep
-            fact('z_prime', z, 'dimensionless', [r['well'] for r in groups['positive'] + groups['negative']])
-            finding('zprime', 'warning' if z < .5 else 'note', 'Control separation', 'Z-prime summarizes control separation and variability. The exploratory reference of 0.5 is not a universal assay acceptance rule.', ['z_prime'])
+            if math.isfinite(z):
+                fact('z_prime', z, 'dimensionless', [r['well'] for r in groups['positive'] + groups['negative']])
+                finding('zprime', 'warning' if z < .5 else 'note', 'Control separation', 'Z-prime summarizes control separation and variability. The exploratory reference of 0.5 is not a universal assay acceptance rule.', ['z_prime'])
+            else:
+                finding('score_range', 'warning', 'Control score cannot be represented reliably', 'The control means are too close relative to their variability for a finite score in this implementation. Inspect the raw control measurements instead.', ['positive_count', 'negative_count'])
         else:
             finding('control_overlap', 'warning', 'Controls have identical means', 'Z-prime is undefined because the control means coincide.', ['positive_count', 'negative_count'])
     samples = defaultdict(list)
@@ -156,9 +170,9 @@ def inspect(rows):
     fact('unreplicated_sample_count', len(singles), 'sample IDs', [r['well'] for r in groups['sample'] if r['sample_id'] in singles])
     if singles:
         finding('replicates', 'warning', 'Some samples lack within-plate replication', 'One measurement cannot estimate within-sample variability. Repeated wells are technical replicates unless independent biological replication is documented.', ['unreplicated_sample_count'])
-    return {'facts': facts, 'findings': findings, 'replicate_summaries': replicate_summaries, 'samples': sorted(samples), 'scope': 'Exploratory single-plate QC. No automatic correction, significance tests, hit ranking, or biological validation.'}
+    return {'facts': facts, 'findings': findings, 'replicate_summaries': replicate_summaries, 'samples': sorted(samples), 'control_ids': {role: sorted({r['sample_id'] for r in groups[role]}) for role in ('negative', 'positive')}, 'scope': 'Exploratory single-plate QC. No automatic correction, significance tests, hit ranking, or biological validation.'}
 
-def plan(sample_ids, budget, seed=11):
+def plan(sample_ids, budget, seed=11, controls=None):
     if isinstance(budget, bool) or not isinstance(budget, int) or not 8 <= budget <= 96:
         raise ValueError('Choose an integer well budget from 8 to 96.')
     if not isinstance(sample_ids, list) or not sample_ids or len(sample_ids) != len(set(sample_ids)):
@@ -171,6 +185,13 @@ def plan(sample_ids, budget, seed=11):
         raise ValueError(f'This design needs {needed} wells. Increase the budget or select fewer samples.')
     if needed // 2 > 36:
         raise ValueError('The 96-well plate has only 36 edge positions. Select at most 16 samples.')
+    if isinstance(seed, bool) or not isinstance(seed, int) or not 0 <= seed <= 4294967295:
+        raise ValueError('The randomization seed must be an integer from 0 to 4294967295.')
+    if controls is not None:
+        if not isinstance(controls, dict) or set(controls) != {'negative', 'positive'} or any(not isinstance(v, str) or not v or len(v) > 120 for v in controls.values()):
+            raise ValueError('Identify both the negative and positive control materials.')
+        if len(set(controls.values())) != 2 or set(controls.values()) & set(sample_ids):
+            raise ValueError('Control identities must be distinct from each other and from selected samples.')
     rng = random.Random(seed)
     wells = [f'{r}{c:02d}' for r in 'ABCDEFGH' for c in range(1, 13)]
     zones = {flag: [w for w in wells if edge(w) == flag] for flag in (True, False)}
@@ -179,7 +200,7 @@ def plan(sample_ids, budget, seed=11):
     result = []
     control_ids = []
     for role in ('negative', 'positive'):
-        sid = role + '_control'
+        sid = controls[role] if controls else role + '_control'
         while sid in sample_ids:
             sid = '_' + sid
         control_ids.append((sid, role))
