@@ -1,0 +1,1590 @@
+{
+  "scope": "Synthetic integrity checks only; does not measure artifact detection accuracy, biological validity, or live model quality.",
+  "cases": 140,
+  "passed": 140,
+  "failed": [],
+  "development_seed": 11,
+  "held_out_seeds": "100\u2013119",
+  "results": [
+    {
+      "scenario": "clean",
+      "seed": 100,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 101,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 102,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 103,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 104,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 105,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 106,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 107,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 108,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 109,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 110,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 111,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 112,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 113,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 114,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 115,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 116,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 117,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 118,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "clean",
+      "seed": 119,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 100,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 101,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 102,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 103,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 104,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 105,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 106,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 107,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 108,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 109,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 110,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 111,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 112,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 113,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 114,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 115,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 116,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 117,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 118,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "artifact",
+      "seed": 119,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 100,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 101,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 102,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 103,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 104,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 105,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 106,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 107,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 108,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 109,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 110,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 111,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 112,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 113,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 114,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 115,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 116,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 117,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 118,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "biology",
+      "seed": 119,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 100,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 101,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 102,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 103,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 104,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 105,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 106,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 107,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 108,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 109,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 110,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 111,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 112,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 113,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 114,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 115,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 116,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 117,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 118,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "both",
+      "seed": 119,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 100,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 101,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 102,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 103,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 104,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 105,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 106,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 107,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 108,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 109,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 110,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 111,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 112,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 113,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 114,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 115,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 116,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 117,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 118,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "confounded",
+      "seed": 119,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "confounding_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 100,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 101,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 102,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 103,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 104,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 105,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 106,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 107,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 108,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 109,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 110,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 111,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 112,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 113,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 114,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 115,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 116,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 117,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 118,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "missing_controls",
+      "seed": 119,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "missing_controls_disclosed": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 100,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 101,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 102,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 103,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 104,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 105,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 106,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 107,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 108,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 109,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 110,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 111,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 112,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 113,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 114,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 115,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 116,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 117,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 118,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent",
+      "seed": 119,
+      "checks": {
+        "finite_serializable_report": true,
+        "evidence_references_resolve": true,
+        "budget_observed": true,
+        "unique_wells": true
+      },
+      "passed": true
+    }
+  ]
+}
