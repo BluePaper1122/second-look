@@ -24,7 +24,7 @@ Updated October 26, 2026 (America/Chicago).
 5. Verify a permission-compatible real plate dataset and ground-truth limitations. Time-box discovery; retain explicit synthetic-only status if unavailable.
 6. Add production hosting, TLS, rate/concurrency/cost limits, data notice, and judge-access persistence. Do not expose the development server publicly.
 7. Prepare the sub-3-minute public demo video, factual Devpost draft, screenshots, setup instructions, and user review package by October 29.
-8. Verify all source is published to https://github.com/BluePaper1122/second-look and keep it current. The GitHub connector rejected a content write with 403. Network-enabled gh authentication is verified and supports direct git publication; the earlier sandboxed invalid-sign-in result was caused by unavailable network access. Browser uploads initialized main. Local and remote histories have been merged without conflicts; prefer network-enabled git pushes now.
+8. Publication verified: all 20 source/document/example files were present on main at commit 7c86c6a. Keep https://github.com/BluePaper1122/second-look current. The GitHub connector rejected a content write with 403. Network-enabled gh authentication is verified and supports direct git publication; the earlier sandboxed invalid-sign-in result was caused by unavailable network access. Browser uploads initialized main. Local and remote histories have been merged without conflicts; prefer network-enabled git pushes now.
 
 ## Schedule and authorization
 
