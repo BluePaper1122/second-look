@@ -17,7 +17,11 @@ def parse_csv(text, mapping=None):
     if not isinstance(text, str) or len(text.encode()) > 1_000_000:
         raise ValueError('Upload a CSV smaller than 1 MB.')
     reader = csv.DictReader(io.StringIO(text.lstrip('\ufeff')))
-    mapping = mapping or {k: k for k in REQUIRED}
+    if mapping is not None and not isinstance(mapping, dict):
+        raise ValueError('Column mapping must be an object.')
+    mapping = mapping if mapping is not None else {k: k for k in REQUIRED}
+    if any(not isinstance(mapping.get(k), str) for k in REQUIRED):
+        raise ValueError('Map all five required columns before inspecting.')
     if not reader.fieldnames or len(reader.fieldnames) != len(set(reader.fieldnames)):
         raise ValueError('CSV headers must be present and unique.')
     if any(mapping.get(k) not in reader.fieldnames for k in REQUIRED):
@@ -28,6 +32,8 @@ def parse_csv(text, mapping=None):
     for line, raw in enumerate(reader, 2):
         if len(rows) >= 96:
             raise ValueError('This prototype supports one plate with at most 96 wells.')
+        if None in raw:
+            raise ValueError(f'Line {line}: more values than CSV headers.')
         r = {k: (raw.get(mapping[k]) or '').strip() for k in REQUIRED}
         if any(not r[k] or len(r[k]) > 120 for k in ('plate_id', 'sample_id')):
             raise ValueError(f'Line {line}: plate and sample IDs are required (maximum 120 characters).')

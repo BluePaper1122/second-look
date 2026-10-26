@@ -20,11 +20,11 @@ Updated October 26, 2026 (America/Chicago).
 1. Verify live NVIDIA Nemotron with a real Nebius key and available model. Neither is configured in the current environment. Do not ask the user to paste keys into chat; use secure local environment configuration.
 2. Expand model contribution beyond prioritization: approved analysis-tool requests and evidence-linked follow-up choices. Compare against fixed QC baseline using blinded, independently labeled scenarios; do not overstate the current integration.
 3. Add control-only position contrasts and within-ID replicate variability summaries. Keep descriptive scope and disclose small sample sizes and layout assumptions.
-4. Improve CSV header parsing, asynchronous request invalidation, export verification, responsive testing, and accessibility. Audit stale results after input changes or out-of-order requests.
+4. Improve CSV header parsing, export verification, responsive testing, and accessibility. Controls are locked during requests to prevent input/output mismatches; changes to sample selections or budget clear previous layouts. Audit stale results after input changes or out-of-order requests.
 5. Verify a permission-compatible real plate dataset and ground-truth limitations. Time-box discovery; retain explicit synthetic-only status if unavailable.
 6. Add production hosting, TLS, rate/concurrency/cost limits, data notice, and judge-access persistence. Do not expose the development server publicly.
 7. Prepare the sub-3-minute public demo video, factual Devpost draft, screenshots, setup instructions, and user review package by October 29.
-8. Verify all source is published to https://github.com/BluePaper1122/second-look and keep it current. The GitHub connection can read metadata but initially rejected a content write with 403. Browser is authenticated and supports repository uploads. Prefer connector/CLI when write access becomes available. Do not claim a successful publication without checking the repository contents.
+8. Verify all source is published to https://github.com/BluePaper1122/second-look and keep it current. The GitHub connector rejected a content write with 403. Network-enabled gh authentication is verified and supports direct git publication; the earlier sandboxed invalid-sign-in result was caused by unavailable network access. Browser uploads initialized main. Local and remote histories have been merged without conflicts; prefer network-enabled git pushes now.
 
 ## Schedule and authorization
 
