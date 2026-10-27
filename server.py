@@ -23,6 +23,7 @@ from workflow import decision_summary, ANALYSIS_VERSION
 from review_file import open_review
 from agent_review import run_review
 from transport import tls_context
+from exports import prepare_plan,reviewed_plan,handoff
 
 ROOT = Path(__file__).parent
 MODEL_SLOTS = threading.BoundedSemaphore(2)
@@ -164,7 +165,7 @@ class APIRoutes:
         else:
             raise AppError('not_found','This page or API endpoint does not exist.',404)
     def post(self):
-        if self.path not in ('/api/inspect','/api/plan','/api/review','/api/open-review'):
+        if self.path not in ('/api/inspect','/api/plan','/api/review','/api/open-review','/api/export-plan','/api/export-handoff'):
             raise AppError('not_found','This API endpoint does not exist.',404)
         if self.headers.get('Transfer-Encoding'):
             raise AppError('unsupported_encoding','Send the request with a known content length.',400)
@@ -195,14 +196,12 @@ class APIRoutes:
         if self.path=='/api/inspect':
             self.send({'rows':rows,'report':report,'workflow':decision_summary(report,rows)})
         elif self.path=='/api/plan':
-            ids=data.get('samples')
-            if not isinstance(ids,list) or any(not isinstance(s,str) or s not in report['samples'] for s in ids):
-                raise AppError('unknown_sample','Select sample IDs from the currently inspected plate.')
-            controls=data.get('controls')
-            if not isinstance(controls,dict) or any(not isinstance(controls.get(role),str) or controls[role] not in report['control_ids'][role] for role in ('negative','positive')):
-                raise AppError('control_selection','Choose a measured negative and positive control material from this plate. If the control information is missing, correct the input before designing the follow-up.')
-            result=plan(ids,data.get('budget'),data.get('seed',11),controls)
-            self.send({**result,'csv':csv_export(result['rows']),'source_report_id':decision_summary(report,rows)['report_id']})
+            self.send(prepare_plan(rows,report,data))
+        elif self.path=='/api/export-plan':
+            result=reviewed_plan(rows,report,data)
+            self.send({'csv':result['csv'],'layout_id':result['layout_id'],'source_report_id':result['source_report_id'],'review_notice':result['review_notice'],'filename':'second-look-'+result['layout_id']+'-followup.csv'})
+        elif self.path=='/api/export-handoff':
+            self.send(handoff(rows,report,data))
         else:
             result=run_review(rows,report,data.get('objective','controls'),data.get('settings'),model_json)
             if result['mode']=='unavailable':

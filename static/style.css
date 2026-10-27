@@ -5,3 +5,16 @@ h1{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;font-size:clamp(
 .table-wrap{overflow-x:auto;margin-top:15px}table{width:100%;border-collapse:collapse;font-size:12px}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}thead{background:#eef1e8}tbody th{font-weight:500;overflow-wrap:anywhere}
 
 .decision{border:1px solid var(--line);border-left:3px solid var(--green);border-radius:8px;background:#f3f5ed;padding:18px;margin:20px 0}.decision h3{font-size:17px;margin:0 0 8px}.decision p{font-size:13px;margin:6px 0}.decision li{margin:15px 0}.decision li strong{font-size:13px}
+
+.skip-link{position:absolute;top:12px;left:12px;z-index:100;background:var(--ink);color:white;padding:10px 16px;border-radius:6px;transform:translateY(-200%)}
+.skip-link:focus{transform:none}
+.plate-wrap{padding:8px;overflow:auto}
+.plate{display:flex;flex-direction:column;gap:6px;min-width:570px}
+.plate-row{display:grid;grid-template-columns:24px repeat(12,minmax(32px,1fr));gap:6px}
+.plate-row [role=gridcell]{min-width:0}
+.well{width:100%;display:block}
+.well.empty{cursor:pointer}
+.plate-row [aria-selected=true] .well{box-shadow:0 0 0 2px var(--ink)}
+.controls>label{min-width:0;max-width:100%}
+.sample-choice{max-width:100%;overflow-wrap:anywhere}
+.sample-choice input{flex-shrink:0}

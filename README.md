@@ -101,3 +101,7 @@ Plate-level QC and position effects are established topics; this project does no
 ## License
 
 Second Look code and generated synthetic examples: MIT; see LICENSE. External FlopR data in `examples/flopr-calibration/` retains its upstream GPL-3.0 license and attribution; see that directory’s README and license.
+
+Reviewed layout exports include the source report, layout identifier, seed, budget, analysis version, and UTC export time. Export routes recompute the proposal and reject changed measurements/settings. Handoffs omit draft well assignments until review is attested. Attestation does not verify reviewer identity or scientific validity.
+
+For a focused review walkthrough and remaining release gates, see [review guide](docs/review-guide.md).

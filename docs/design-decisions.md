@@ -44,3 +44,9 @@ The user requested that development itself follow their essay: https://criticalp
 ## Review obligations for subsequent work
 
 For each substantive change, record its user problem, scope, evidence, important alternative or tradeoff, failure behavior, and verification. Use consistent rules across equivalent inputs. Preserve reversibility and meaningful human choice. Treat disagreement and counterexamples as reasons to re-evaluate the design rather than explanations to suppress. Verify implementation with direct behavior checks; seek domain review for scientific validity. Do not equate a passing test suite, AI consensus, or a philosophical label with a finished product.
+
+## Export review boundary
+
+A handoff is another route by which a draft could become actionable. It therefore follows the same review boundary as the layout CSV: unreviewed assignments are omitted. The server recomputes allocations and compares source and layout identifiers before reviewed export. These identifiers detect ordinary stale-state mistakes; they are not signatures, authentication, or proof that an expert reviewed the experiment. Export metadata makes the proposal traceable without inventing that assurance. Sorting selected IDs before seeded allocation makes equivalent selections reproducible regardless of click order.
+
+The plate map uses one Tab stop with arrow navigation so inspecting 96 wells does not require 96 Tab presses. Empty wells remain inspectable and are described as unmeasured, preserving the distinction between missing data and zero.

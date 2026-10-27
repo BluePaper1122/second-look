@@ -29,14 +29,72 @@ $('load').onclick=()=>busy('load',async()=>{const v=await request('/api/example?
 $('file').onchange=()=>busy('inspect',async()=>{const file=$('file').files[0];if(!file)return;if(file.size>1e6)throw Error('Choose a CSV smaller than 1 MB.');try{$('csv').value=new TextDecoder('utf-8',{fatal:true}).decode(await file.arrayBuffer());}catch{throw Error('This file is not readable UTF-8 CSV. Export it with UTF-8 encoding and retry.');}provenance='Uploaded data · '+file.name+' · provenance not verified';$('provenance').textContent=provenance;mapping();notice('Your plate is ready. Confirm the columns, then inspect.');});
 $('csv').oninput=()=>{provenance='Manually edited data · provenance not verified';$('provenance').textContent=provenance;mapping();};
 $('playful').onchange=()=>{document.querySelector('.pip').hidden=!$('playful').checked;};
-function drawPlate(rows){const byWell=new Map(rows.map(r=>[r.well,r]));const values=rows.map(r=>r.value);const min=Math.min(...values),max=Math.max(...values);let html='<span></span>'+Array.from({length:12},(_,i)=>`<span class="axis">${i+1}</span>`).join('');for(const row of 'ABCDEFGH'){html+=`<span class="axis">${row}</span>`;for(let c=1;c<=12;c++){const w=row+String(c).padStart(2,'0'),r=byWell.get(w);const n=r?(r.value-min)/(max-min||1):0;html+=`<button class="well ${r?(r.control!=='sample'?'control':''):'empty'}" data-well="${w}" ${r?'':'disabled'} aria-label="${esc(r?`${w}, ${r.sample_id}, ${r.value}, ${r.control}`:`${w}, unmeasured`)}" style="">${r?esc(w):'·'}</button>`;}}
-$('plate').innerHTML=html;for(const button of $('plate').querySelectorAll('[data-well]')){const r=byWell.get(button.dataset.well);if(r){const n=(r.value-min)/(max-min||1);button.style.backgroundColor=`rgb(${Math.round(234-155*n)},${Math.round(240-83*n)},${Math.round(200-68*n)})`;button.onclick=()=>{$('wellDetail').textContent=`${r.well} · ${r.sample_id} · ${r.control} · raw measurement ${r.value}`;};}}}
+function drawPlate(rows){
+ const byWell=new Map(rows.map(r=>[r.well,r]));
+ const values=rows.map(r=>r.value),min=Math.min(...values),max=Math.max(...values);
+ let html='<div role="row" class="plate-row"><span role="columnheader" class="axis">Row</span>'+
+  Array.from({length:12},(_,i)=>`<span role="columnheader" class="axis">${i+1}</span>`).join('')+'</div>';
+ for(const row of 'ABCDEFGH'){
+  html+=`<div role="row" class="plate-row"><span role="rowheader" class="axis">${row}</span>`;
+  for(let c=1;c<=12;c++){
+   const well=row+String(c).padStart(2,'0'),r=byWell.get(well);
+   const label=r?`${well}, ${r.sample_id}, ${r.value}, ${r.control}`:`${well}, unmeasured`;
+   html+=`<div role="gridcell" aria-selected="false"><button class="well ${r?(r.control!=='sample'?'control':''):'empty'}" data-well="${well}" tabindex="${well==='A01'?0:-1}" aria-label="${esc(label)}">${r?esc(well):'·'}</button></div>`;
+  }
+  html+='</div>';
+ }
+ $('plate').innerHTML=html;
+ function inspectWell(well){
+  for(const button of $('plate').querySelectorAll('[data-well]')){
+   const active=button.dataset.well===well;
+   button.tabIndex=active?0:-1;button.parentElement.setAttribute('aria-selected',String(active));
+  }
+  const r=byWell.get(well);
+  $('wellDetail').textContent=r?`${r.well} · ${r.sample_id} · ${r.control} · raw measurement ${r.value}`:`${well} · No measurement was recorded. This position is not treated as zero.`;
+ }
+ for(const button of $('plate').querySelectorAll('[data-well]')){
+  const r=byWell.get(button.dataset.well);
+  if(r){const n=(r.value-min)/(max-min||1);button.style.backgroundColor=`rgb(${Math.round(234-155*n)},${Math.round(240-83*n)},${Math.round(200-68*n)})`;}
+  button.onclick=()=>inspectWell(button.dataset.well);button.onfocus=()=>inspectWell(button.dataset.well);
+ }
+ $('plate').onkeydown=event=>{
+  const button=event.target.closest('button[data-well]');if(!button)return;
+  let row=button.dataset.well.charCodeAt(0)-65,col=Number(button.dataset.well.slice(1))-1;
+  const whole=event.ctrlKey||event.metaKey;
+  switch(event.key){
+   case 'ArrowRight':col=Math.min(11,col+1);break;
+   case 'ArrowLeft':col=Math.max(0,col-1);break;
+   case 'ArrowDown':row=Math.min(7,row+1);break;
+   case 'ArrowUp':row=Math.max(0,row-1);break;
+   case 'Home':col=0;if(whole)row=0;break;
+   case 'End':col=11;if(whole)row=7;break;
+   case 'PageDown':row=Math.min(7,row+4);break;
+   case 'PageUp':row=Math.max(0,row-4);break;
+   default:return;
+  }
+  event.preventDefault();
+  const well=String.fromCharCode(65+row)+String(col+1).padStart(2,'0');
+  $('plate').querySelector(`[data-well="${well}"]`).focus();
+ };
+}
 function findingHtml(f,facts){return `<article class="finding"><h3><span class="badge">${esc(f.level)}</span>${esc(f.title)}</h3><p>${esc(f.detail)}</p><details><summary>See supporting measurements</summary><div class="evidence">${f.evidence.map(id=>{const x=facts[id];return esc(`${id}: ${typeof x.value==='number'?Number(x.value.toPrecision(6)):x.value} ${x.units}\nWells: ${x.wells.join(', ')||'none'}`);}).join('\n\n')}</div></details></article>`;}
 function renderInspection(value){current=value;$('results').hidden=false;drawPlate(current.rows);const flow=current.workflow;const labels={controls_only:'Control measurements only',control_review_needed:'Control information needs review',position_check_suggested:'A position check may help',researcher_review:'Ready for researcher review'};$('decision').innerHTML=`<h3>${esc(labels[flow.state]||'Review the evidence')}</h3><p>${esc(flow.message)}</p><p class="small">Report ${esc(flow.report_id)} · Analysis ${esc(flow.analysis_version)}</p><details><summary>Suggested next steps</summary><ol>${flow.actions.map(a=>`<li><strong>${esc(a.title)}</strong><p>${esc(a.detail)}</p></li>`).join('')}</ol></details>`;const {facts,findings,samples}=current.report;$('findings').innerHTML=findings.map(f=>findingHtml(f,facts)).join('');$('replicateTable').innerHTML='<table><thead><tr><th scope="col">Sample / control</th><th scope="col">Role</th><th scope="col">Zone</th><th scope="col">Wells</th><th scope="col">Mean</th><th scope="col">SD</th></tr></thead><tbody>'+(current.report.replicate_summaries||[]).map(g=>{const values=g.evidence.map(k=>facts[k].value);return '<tr><th scope="row">'+esc(g.sample_id)+'</th><td>'+esc(g.role)+'</td><td>'+esc(g.zone)+'</td><td>'+values[0]+'</td><td>'+Number(values[1].toPrecision(5))+'</td><td>'+(values.length>2?Number(values[2].toPrecision(5)):'Not estimable')+'</td></tr>';}).join('')+'</tbody></table>';$('metrics').innerHTML=[['well_count','Measured wells'],['z_prime','Z-prime · exploratory'],['uncrossed_sample_count','Sample IDs in one zone']].filter(([k])=>facts[k]).map(([k,label])=>`<div class="metric"><strong>${Number(facts[k].value.toFixed(3))}</strong><span>${label}</span></div>`).join('');$('samples').innerHTML='<legend>Samples for follow-up</legend>'+samples.map((s,i)=>`<label class="sample-choice"><input type="checkbox" value="${esc(s)}" >${esc(s)}</label>`).join('');for(const box of $('samples').querySelectorAll('input'))box.onchange=clearPlan;$('controlSelection').innerHTML=['negative','positive'].map(role=>`<label>${role==='negative'?'Negative':'Positive'} control material<select id="control_${role}"><option value="">${current.report.control_ids[role].length?'Choose a control':'No measured control in input'}</option>${current.report.control_ids[role].map(s=>`<option value="${esc(s)}" ${current.report.control_ids[role].length===1?'selected':''}>${esc(s)}</option>`).join('')}</select></label>`).join('');for(const select of $('controlSelection').querySelectorAll('select'))select.onchange=clearPlan;$('planResult').replaceChildren();notice('Inspection complete. Observations are exploratory; no measurements were corrected.');$('wellDetail').textContent='Select a measured well to inspect it.';}
 $('inspect').onclick=()=>busy('inspect',async()=>{invalidate();renderInspection(await api('/api/inspect',input()));});
 $('review').onclick=()=>busy('review',async()=>{$('modelStatus').textContent='Requesting a live review…';try{const v=await api('/api/review',{...input(),objective:$('objective').value,settings:followupSettings()});$('modelStatus').textContent=v.message+(v.model?' Model: '+v.model:'');$('priorities').innerHTML='<p class="small">Source report '+esc(v.source_report_id)+' · '+v.runtime_calls+' runtime calls</p>'+(v.analyses||[]).map(a=>'<article class="finding"><h3>'+esc(a.title)+'</h3><p>'+esc(a.explanation)+'</p><p class="small">'+esc(a.limitations)+'</p><details><summary>Computed evidence · '+esc(a.id)+'</summary><pre class="evidence">'+esc(JSON.stringify(a,null,2))+'</pre></details></article>').join('')+'<h3>'+esc(v.next_action.title)+'</h3><p>'+esc(v.next_action.detail)+'</p><p class="small">Model-selected evidence: '+esc(v.selected_evidence.join(', '))+'</p>'+(v.priorities||[]).map(c=>findingHtml(current.report.findings.find(f=>f.code===c),current.report.facts)).join('');}catch(e){$('modelStatus').textContent='Live review unavailable. Deterministic findings remain available.';throw e;}});
-$('plan').onclick=()=>busy('plan',async()=>{layout=null;$('planResult').replaceChildren();const samples=[...$('samples').querySelectorAll('input:checked')].map(x=>x.value);layout=await api('/api/plan',{...input(),samples,budget:Number($('budget').value),seed:Number($('seed').value),controls:Object.fromEntries(['negative','positive'].map(role=>[role,$('control_'+role).value]))});$('planResult').innerHTML=`<p><strong>${layout.used} wells allocated · ${layout.unused} budgeted wells unused</strong></p><p>${esc(layout.explanation)}</p><label><input type="checkbox" id="approve"> I have reviewed this proposed layout for assay compatibility.</label><p><button id="layoutDownload" disabled>Export reviewed layout CSV</button></p><details><summary>View allocated wells</summary><pre class="evidence">${esc(layout.csv)}</pre></details>`;$('approve').onchange=()=>{$('layoutDownload').disabled=!$('approve').checked;};$('layoutDownload').onclick=()=>download('second-look-followup.csv',layout.csv,'text/csv');notice('Follow-up layout ready for your review.');});
-$('reportDownload').onclick=()=>{if(!current)return;const r=current.report;const text=['SECOND LOOK — RESEARCH HANDOFF',provenance,`Report: ${current.workflow.report_id} | Analysis version: ${current.workflow.analysis_version}`,'REVIEW GUIDANCE',current.workflow.message,current.workflow.decision_boundary,...current.workflow.actions.flatMap(a=>[a.title,a.detail]),'',r.scope,'','OBSERVATIONS',...r.findings.flatMap(f=>[f.title,f.detail,...f.evidence.map(k=>`${k}: ${JSON.stringify(r.facts[k])}`),'']),'RESEARCHER NOTES (NOT MODEL FINDINGS)',$('notes').value,'REPEATED MEASUREMENTS BY POSITION',...(r.replicate_summaries||[]).flatMap(g=>[`${g.sample_id} | ${g.role} | ${g.zone}`,...g.evidence.map(k=>`${k}: ${JSON.stringify(r.facts[k])}`)]),'WHAT REMAINS UNCERTAIN','Spatial associations do not establish causation. Technical wells do not establish biological replication. Synthetic examples do not establish scientific validity.','',...(layout?['PROPOSED FOLLOW-UP',layout.explanation,layout.csv]:['NEXT STEP','Select samples and generate a follow-up layout for human review.'])].join('\n');download('second-look-handoff.txt',text,'text/plain');};
+$('plan').onclick=()=>busy('plan',async()=>{layout=null;$('planResult').replaceChildren();const samples=[...$('samples').querySelectorAll('input:checked')].map(x=>x.value);layout=await api('/api/plan',{...input(),samples,budget:Number($('budget').value),seed:Number($('seed').value),controls:Object.fromEntries(['negative','positive'].map(role=>[role,$('control_'+role).value]))});$('planResult').innerHTML=`<p class="small">Layout ${esc(layout.layout_id)} · Source report ${esc(layout.source_report_id)}</p><p><strong>${layout.used} wells allocated · ${layout.unused} budgeted wells unused</strong></p><p>${esc(layout.explanation)}</p><label><input type="checkbox" id="approve"> I have reviewed this proposed layout for assay compatibility.</label><p><button id="layoutDownload" disabled>Export reviewed layout CSV</button></p><details><summary>View allocated wells</summary><pre class="evidence">${esc(layout.csv)}</pre></details>`;$('approve').onchange=()=>{$('layoutDownload').disabled=!$('approve').checked;};$('layoutDownload').onclick=()=>busy('layoutDownload',async()=>{
+ if(!layout||!$('approve').checked)throw Error('Review the current layout before exporting it.');
+ const result=await api('/api/export-plan',{...input(),...followupSettings(),reviewed:true,source_report_id:layout.source_report_id,layout_id:layout.layout_id});
+ download(result.filename,result.csv,'text/csv');notice('Reviewed layout prepared for download with its source report, layout ID, seed, and review attestation.');
+});notice('Follow-up layout ready for your review.');});
+$('reportDownload').onclick=()=>busy('reportDownload',async()=>{
+ if(!current)throw Error('Inspect a plate before exporting its handoff note.');
+ const reviewed=Boolean(layout&&$('approve')?.checked);
+ const result=await api('/api/export-handoff',{...input(),...followupSettings(),notes:$('notes').value,provenance,
+   layout_present:Boolean(layout),include_layout:reviewed,reviewed,
+   source_report_id:layout?.source_report_id,layout_id:layout?.layout_id});
+ download(result.filename,result.text,'text/plain');
+ notice(result.includes_reviewed_layout?'Handoff prepared with the reviewed proposal and source identifiers.':'Handoff prepared. Unreviewed well assignments are not included.');
+});
 
 function clearPlan(){layout=null;$('planResult').replaceChildren();$('priorities').replaceChildren();$('modelStatus').textContent='Settings changed. Request a new model review if needed.';}
 $('budget').oninput=clearPlan;

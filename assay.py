@@ -179,6 +179,9 @@ def plan(sample_ids, budget, seed=11, controls=None):
         raise ValueError('Select at least one unique sample ID.')
     if any(not isinstance(s, str) or not s or len(s) > 120 for s in sample_ids):
         raise ValueError('Invalid sample ID.')
+    # Selection order is not an experimental parameter. Canonicalize it so
+    # equivalent selections produce identical allocations with the same seed.
+    sample_ids=sorted(sample_ids)
     # Two wells per zone for each sample, and two per zone for each control.
     needed = 4 * len(sample_ids) + 8
     if needed > budget:

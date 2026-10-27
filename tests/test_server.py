@@ -117,6 +117,25 @@ class HTTPTests(unittest.TestCase):
         with patch('pathlib.Path.read_bytes',return_value=b'changed input'):
             status,body=self.request('/api/example?kind=flopr_calibration',method='GET')
         self.assertEqual((status,body['code']),(503,'example_unavailable'))
+    def test_reviewed_export_route_preserves_identity(self):
+        data={'csv':example(),'samples':['candidate_edge'],'budget':12,'controls':{'negative':'negative_control','positive':'positive_control'}}
+        _,layout=self.request('/api/plan',json.dumps(data))
+        status,body=self.request('/api/export-plan',json.dumps(data))
+        self.assertEqual((status,body['code']),(400,'review_required'))
+        data.update(reviewed=True,source_report_id=layout['source_report_id'],layout_id=layout['layout_id'])
+        status,body=self.request('/api/export-plan',json.dumps(data))
+        self.assertEqual(status,200)
+        self.assertIn('researcher_attested',body['csv'])
+        self.assertEqual(body['source_report_id'],layout['source_report_id'])
+    def test_handoff_does_not_bypass_layout_review(self):
+        data={'csv':example(),'notes':'Synthetic handoff check','layout_present':True,'include_layout':False}
+        status,body=self.request('/api/export-handoff',json.dumps(data))
+        self.assertEqual(status,200)
+        self.assertFalse(body['includes_reviewed_layout'])
+        self.assertNotIn('technical_replicate',body['text'])
+        data['include_layout']=True
+        status,body=self.request('/api/export-handoff',json.dumps(data))
+        self.assertEqual((status,body['code']),(400,'review_required'))
     def test_unknown_endpoint(self):
         status,body=self.request('/api/missing','{}')
         self.assertEqual((status,body['code']),(404,'not_found'))

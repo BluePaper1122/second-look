@@ -13,7 +13,7 @@ A local application imports a 96-well plate, calculates descriptive QC, connects
 The proposed contribution connects a specific evidence limitation to a constrained follow-up design and a concise researcher handoff. QC and plate normalization already exist. Do not claim novel statistical methods or global uniqueness.
 
 ## Evaluation so far
-87 automated checks and 140 held-out synthetic integrity cases pass. These check arithmetic, validation, evidence references, and layout properties. They do not measure scientific validity, artifact-detection accuracy, or live model quality. A 48-well real instrument-calibration compatibility case now verifies exact measurement preservation and abstention when assay-control roles are absent. It is not a biological validation benchmark; real assay validity and model usefulness remain unverified.
+97 automated checks and 140 held-out synthetic integrity cases pass. These check arithmetic, validation, evidence references, and layout properties. They do not measure scientific validity, artifact-detection accuracy, or live model quality. A 48-well real instrument-calibration compatibility case now verifies exact measurement preservation and abstention when assay-control roles are absent. It is not a biological validation benchmark; real assay validity and model usefulness remain unverified.
 
 ## Serving evidence
 A separate WSGI gateway and hash-pinned Waitress launcher have been verified locally through HTTP, including synthetic inspection, health/HEAD, security headers, and origin rejection. A public deployment and managed TLS route are not yet verified. Local secret setup and a synthetic-only live inference verifier are prepared; credentials still require account-owner setup.
