@@ -23,6 +23,7 @@ The user requested that development itself follow their essay: https://criticalp
 | Model/network failures preserve local work | A service outage does not invalidate deterministic measurements or justify losing a researcher's input. | Errors must identify a recovery path and never masquerade as successful inference. |
 | Bounded calls, response sizes, and request duration | Resource limits prevent an unresponsive interface and uncontrolled provider work. | Current limits are operational defaults, not scientific assumptions; monitor and adjust for documented usage. |
 | Report fingerprint and analysis version | A handoff must identify which measurements and calculation version it refers to. | A fingerprint is an identifier, not a security signature, proof of truth, or identity verification. |
+| Explicit portable review files | Researchers can resume work and share context without adding an account or silent data storage. | Files contain measurements and notes; the user chooses where to save them. Reopening recalculates findings and resets approval rather than trusting saved conclusions. |
 | Restrained, optional Pip | Personality is a preference, not a source of scientific authority. | The user can hide it; reports retain professional language. |
 
 ## Changes made following this review

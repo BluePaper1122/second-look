@@ -82,6 +82,16 @@ class HTTPTests(unittest.TestCase):
         status,body=self.request('/api/plan',json.dumps(data))
         self.assertEqual(status,400)
         self.assertIn('seed',body['error'])
+    def test_saved_review_reopens_through_http_without_approval(self):
+        source={'format':'second-look-review','version':1,'analysis_version':'0.2.0','input':{'csv':example()},'settings':{'samples':['candidate_edge'],'budget':12,'seed':11,'controls':{'negative':'negative_control','positive':'positive_control'}},'notes':'Synthetic workflow check','approved':True}
+        status,body=self.request('/api/open-review',json.dumps({'session':source}))
+        self.assertEqual(status,200)
+        self.assertEqual(body['session']['notes'],'Synthetic workflow check')
+        self.assertNotIn('approved',body)
+        self.assertIn('report_id',body['workflow'])
+    def test_invalid_review_file_returns_specific_error(self):
+        status,body=self.request('/api/open-review',json.dumps({'session':{'version':999}}))
+        self.assertEqual((status,body['code']),(400,'review_format'))
     def test_unknown_endpoint(self):
         status,body=self.request('/api/missing','{}')
         self.assertEqual((status,body['code']),(404,'not_found'))

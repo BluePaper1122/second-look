@@ -19,6 +19,7 @@ from urllib.parse import urlparse, parse_qs
 from assay import parse_csv, inspect, plan, example, csv_export
 from errors import AppError, error_payload
 from workflow import decision_summary, ANALYSIS_VERSION
+from review_file import open_review
 
 ROOT = Path(__file__).parent
 MODEL_SLOTS = threading.BoundedSemaphore(2)
@@ -180,7 +181,7 @@ class Handler(BaseHTTPRequestHandler):
         else:
             raise AppError('not_found','This page or API endpoint does not exist.',404)
     def post(self):
-        if self.path not in ('/api/inspect','/api/plan','/api/review'):
+        if self.path not in ('/api/inspect','/api/plan','/api/review','/api/open-review'):
             raise AppError('not_found','This API endpoint does not exist.',404)
         if self.headers.get('Transfer-Encoding'):
             raise AppError('unsupported_encoding','Send the request with a known content length.',400)
@@ -203,6 +204,9 @@ class Handler(BaseHTTPRequestHandler):
             raise AppError('invalid_json','The request could not be read as UTF-8 JSON. Retry from the application.',400) from None
         if not isinstance(data,dict):
             raise AppError('invalid_input','Expected a JSON object.',400)
+        if self.path=='/api/open-review':
+            self.send(open_review(data.get('session')))
+            return
         rows=parse_csv(data.get('csv'),data.get('mapping'))
         report=inspect(rows)
         if self.path=='/api/inspect':
