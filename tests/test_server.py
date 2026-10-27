@@ -106,6 +106,17 @@ class HTTPTests(unittest.TestCase):
             status,body=self.request('/api/review',json.dumps({'csv':example(),'objective':'position','settings':{'samples':[]}}))
         self.assertEqual((status,body['code']),(400,'review_sample_required'))
         call.assert_not_called()
+    def test_external_example_declares_real_source_and_license(self):
+        status,body=self.request('/api/example?kind=flopr_calibration',method='GET')
+        self.assertEqual(status,200)
+        self.assertFalse(body['synthetic'])
+        self.assertIn('GPL-3.0',body['license'])
+        self.assertIn('ucl-cssb/flopr',body['source_url'])
+        self.assertEqual(len(parse_csv(body['csv'])),48)
+    def test_changed_external_example_not_labeled_verified_source(self):
+        with patch('pathlib.Path.read_bytes',return_value=b'changed input'):
+            status,body=self.request('/api/example?kind=flopr_calibration',method='GET')
+        self.assertEqual((status,body['code']),(503,'example_unavailable'))
     def test_unknown_endpoint(self):
         status,body=self.request('/api/missing','{}')
         self.assertEqual((status,body['code']),(404,'not_found'))

@@ -25,6 +25,8 @@ The user requested that development itself follow their essay: https://criticalp
 | Bounded calls, response sizes, and request duration | Resource limits prevent an unresponsive interface and uncontrolled provider work. | Current limits are operational defaults, not scientific assumptions; monitor and adjust for documented usage. |
 | Report fingerprint and analysis version | A handoff must identify which measurements and calculation version it refers to. | A fingerprint is an identifier, not a security signature, proof of truth, or identity verification. |
 | Explicit portable review files | Researchers can resume work and share context without adding an account or silent data storage. | Files contain measurements and notes; the user chooses where to save them. Reopening recalculates findings and resets approval rather than trusting saved conclusions. |
+| External-data compatibility kept distinct from validation | Real readings exercise ingestion and abstention but cannot establish artifact detection accuracy without relevant ground truth. | Preserve source bytes, attribution, license and transformation rules. A calibration gradient is intentional, not proof of an artifact; do not infer assay controls from signal magnitude. |
+| Verified OS trust fallback | The local Python installation had no default CA roots, blocking legitimate HTTPS. | Load the established OS CA bundle only when no roots and no explicit user trust paths are configured. Keep certificate and hostname verification required. |
 | Restrained, optional Pip | Personality is a preference, not a source of scientific authority. | The user can hide it; reports retain professional language. |
 
 ## Changes made following this review

@@ -1,0 +1,233 @@
+{
+  "kind": "real instrument calibration compatibility case; not biological validation",
+  "source_repository": "https://github.com/ucl-cssb/flopr",
+  "source_commit": "83d7b92c50a5e12ed692459e5d57d65d08c11665",
+  "source_url": "https://raw.githubusercontent.com/ucl-cssb/flopr/83d7b92c50a5e12ed692459e5d57d65d08c11665/examples/plate_reader/tecan_spark/191219_calibration_membrane_parsed.csv",
+  "source_blob_sha1": "815e313821249603bc73a5e6046a0294bf34b383",
+  "source_sha256": "f1907e0dc4956acd0693abe7a837002d93b29c63a707025c6e952d0a455900bb",
+  "upstream_license": "GPL-3.0; retained separately from Second Look MIT source code",
+  "channel": "GFP 40; raw arbitrary instrument units as provided upstream",
+  "selection": "fluorescein calibrant rows with finite numeric GFP 40 values",
+  "sample_identity_fields": [
+    "calibrant",
+    "fluorophore",
+    "media",
+    "concentration"
+  ],
+  "role_mapping": "all imported rows are sample; no assay positive/negative roles are inferred",
+  "measured_wells": 48,
+  "omitted_rows": [
+    {
+      "well": "E1",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E2",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E3",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E4",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E5",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E6",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E7",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E8",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E9",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E10",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E11",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "E12",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F1",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F2",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F3",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F4",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F5",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F6",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F7",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F8",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F9",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F10",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F11",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "F12",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G1",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G2",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G3",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G4",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G5",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G6",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G7",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G8",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G9",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G10",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G11",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "G12",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H1",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H2",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H3",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H4",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H5",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H6",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H7",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H8",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H9",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H10",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H11",
+      "reason": "different calibrant"
+    },
+    {
+      "well": "H12",
+      "reason": "different calibrant"
+    }
+  ],
+  "checks": {
+    "source_measurements_preserved": true,
+    "control_roles_not_invented": true,
+    "control_requirement_disclosed": true,
+    "control_score_withheld": true,
+    "finite_report": true
+  },
+  "finding_codes": [
+    "confounding",
+    "controls",
+    "partial",
+    "spatial"
+  ],
+  "report_id": "661a0a3530ad26d8",
+  "limitations": [
+    "Only one calibration channel is imported; no kinetics or normalization is performed.",
+    "A concentration gradient is intentional and must not be interpreted as proof of an edge artifact.",
+    "This case checks compatibility and abstention, not sensitivity/specificity, biological validity, or model quality."
+  ],
+  "converted_sha256": "6d86410f44d20d885b37d98d7a54bc4359d2d974670e30da2e7bbc6df755d019"
+}

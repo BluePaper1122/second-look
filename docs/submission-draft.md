@@ -13,7 +13,7 @@ A local application imports a 96-well plate, calculates descriptive QC, connects
 The proposed contribution connects a specific evidence limitation to a constrained follow-up design and a concise researcher handoff. QC and plate normalization already exist. Do not claim novel statistical methods or global uniqueness.
 
 ## Evaluation so far
-60 automated checks and 140 held-out synthetic integrity cases pass. These check arithmetic, validation, evidence references, and layout properties. They do not measure scientific validity, artifact-detection accuracy, or live model quality. No verified real assay dataset has been used yet.
+67 automated checks and 140 held-out synthetic integrity cases pass. These check arithmetic, validation, evidence references, and layout properties. They do not measure scientific validity, artifact-detection accuracy, or live model quality. A 48-well real instrument-calibration compatibility case now verifies exact measurement preservation and abstention when assay-control roles are absent. It is not a biological validation benchmark; real assay validity and model usefulness remain unverified.
 
 ## Before publishing this draft as a submission
 Replace status with verified final behavior. Include actual live model ID, integration evidence, hosted demo URL, public repository URL, measured evaluation results, limitations, and a public YouTube video shorter than three minutes. Supply honest platform feedback. Confirm current hackathon rules and eligibility.
