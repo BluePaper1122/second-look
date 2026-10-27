@@ -92,6 +92,20 @@ class HTTPTests(unittest.TestCase):
     def test_invalid_review_file_returns_specific_error(self):
         status,body=self.request('/api/open-review',json.dumps({'session':{'version':999}}))
         self.assertEqual((status,body['code']),(400,'review_format'))
+    def test_review_route_executes_both_stages_with_scoped_tools(self):
+        scripted=iter([{'mode':'live','model':'nvidia/scripted-test-only','payload':{'tool_calls':[{'name':'sample_position','arguments':{'sample_id':'candidate_edge'}}]}}, {'mode':'live','model':'nvidia/scripted-test-only','payload':{'priorities':['confounding'],'evidence_ids':['analysis_1'],'next_action':'confounding'}}])
+        data={'csv':example(),'objective':'position','settings':{'samples':['candidate_edge'],'controls':{'negative':'negative_control','positive':'positive_control'},'budget':12}}
+        with patch('server.model_json',side_effect=lambda _:next(scripted)) as call:
+            status,body=self.request('/api/review',json.dumps(data))
+        self.assertEqual(status,200)
+        self.assertEqual(call.call_count,2)
+        self.assertEqual(body['analyses'][0]['status'],'needs_data')
+        self.assertEqual(body['runtime_calls'],2)
+    def test_missing_review_selection_rejected_before_provider(self):
+        with patch('server.model_json') as call:
+            status,body=self.request('/api/review',json.dumps({'csv':example(),'objective':'position','settings':{'samples':[]}}))
+        self.assertEqual((status,body['code']),(400,'review_sample_required'))
+        call.assert_not_called()
     def test_unknown_endpoint(self):
         status,body=self.request('/api/missing','{}')
         self.assertEqual((status,body['code']),(404,'not_found'))

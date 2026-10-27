@@ -7,13 +7,13 @@ Second Look: review a plate assay and plan what to repeat.
 A measured response can be difficult to interpret when sample identity and plate position overlap. Researchers need to see those limitations and choose a follow-up that can separate plausible explanations.
 
 ## Current implementation
-A local application imports a 96-well plate, calculates descriptive QC, connects findings to their supporting measurements, and creates a budgeted follow-up that places selected samples and controls at both edge and interior positions. A human reviews the layout before export. Optional NVIDIA Nemotron review through Nebius prioritizes existing findings; successful live use still requires verification.
+A local application imports a 96-well plate, calculates descriptive QC, connects findings to their supporting measurements, and creates a budgeted follow-up that places selected samples and controls at both edge and interior positions. A human reviews the layout before export. The optional NVIDIA Nemotron workflow requests scoped read-only analyses and selects a next step using their computed evidence. It uses two inference calls with bounded schemas and evidence-reference validation. Scripted responses exercise orchestration, but successful live use still requires verification.
 
 ## What is different
 The proposed contribution connects a specific evidence limitation to a constrained follow-up design and a concise researcher handoff. QC and plate normalization already exist. Do not claim novel statistical methods or global uniqueness.
 
 ## Evaluation so far
-12 unit tests and 140 held-out synthetic integrity cases pass. These check arithmetic, validation, evidence references, and layout properties. They do not measure scientific validity, artifact-detection accuracy, or live model quality. No verified real assay dataset has been used yet.
+60 automated checks and 140 held-out synthetic integrity cases pass. These check arithmetic, validation, evidence references, and layout properties. They do not measure scientific validity, artifact-detection accuracy, or live model quality. No verified real assay dataset has been used yet.
 
 ## Before publishing this draft as a submission
 Replace status with verified final behavior. Include actual live model ID, integration evidence, hosted demo URL, public repository URL, measured evaluation results, limitations, and a public YouTube video shorter than three minutes. Supply honest platform feedback. Confirm current hackathon rules and eligibility.
