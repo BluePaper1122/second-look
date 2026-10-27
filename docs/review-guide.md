@@ -25,5 +25,5 @@ This is a reviewable research prototype. It is not yet ready for a final submiss
 - Complete browser download, responsive, and assistive-technology checks.
 - Obtain domain review of scientific wording and design assumptions; do not claim biological validation.
 - If a public demo is needed, provision an authorized host, TLS, secrets, provider spending controls, and judge access. Local Waitress serving has been tested; public hosting and Docker execution have not.
-- Record the factual under-three-minute demo using [submission draft](submission-draft.md). Show live model use only after verification; do not substitute scripted responses without disclosure.
+- Record the factual under-three-minute demo using [recording script](demo-script.md) and [submission draft](submission-draft.md). Show live model use only after verification; do not substitute scripted responses without disclosure.
 - User reviews project, eligibility, required assets, and final entry. The agent does not submit the hackathon entry.

@@ -1,5 +1,6 @@
 {
   "scope": "Synthetic integrity checks only; does not measure artifact detection accuracy, biological validity, or live model quality.",
+  "allocation_scope": "Uses the product allocation validation path; missing controls must block allocation. Feasible layouts are checked independently for selected materials, measured roles, two wells per zone, unique positions, budget, and selection-order invariance.",
   "cases": 140,
   "passed": 140,
   "failed": [],
@@ -13,7 +14,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -24,7 +29,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -35,7 +44,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -46,7 +59,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -57,7 +74,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -68,7 +89,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -79,7 +104,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -90,7 +119,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -101,7 +134,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -112,7 +149,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -123,7 +164,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -134,7 +179,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -145,7 +194,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -156,7 +209,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -167,7 +224,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -178,7 +239,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -189,7 +254,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -200,7 +269,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -211,7 +284,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -222,7 +299,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -233,7 +314,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -244,7 +329,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -255,7 +344,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -266,7 +359,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -277,7 +374,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -288,7 +389,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -299,7 +404,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -310,7 +419,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -321,7 +434,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -332,7 +449,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -343,7 +464,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -354,7 +479,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -365,7 +494,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -376,7 +509,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -387,7 +524,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -398,7 +539,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -409,7 +554,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -420,7 +569,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -431,7 +584,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -442,7 +599,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -453,7 +614,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -464,7 +629,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -475,7 +644,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -486,7 +659,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -497,7 +674,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -508,7 +689,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -519,7 +704,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -530,7 +719,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -541,7 +734,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -552,7 +749,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -563,7 +764,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -574,7 +779,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -585,7 +794,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -596,7 +809,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -607,7 +824,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -618,7 +839,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -629,7 +854,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -640,7 +869,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -651,7 +884,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -662,7 +899,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -673,7 +914,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -684,7 +929,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -695,7 +944,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -706,7 +959,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -717,7 +974,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -728,7 +989,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -739,7 +1004,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -750,7 +1019,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -761,7 +1034,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -772,7 +1049,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -783,7 +1064,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -794,7 +1079,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -805,7 +1094,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -816,7 +1109,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -827,7 +1124,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -838,7 +1139,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -849,7 +1154,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -860,7 +1169,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -871,7 +1184,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -882,7 +1199,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -894,7 +1215,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -906,7 +1231,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -918,7 +1247,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -930,7 +1263,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -942,7 +1279,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -954,7 +1295,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -966,7 +1311,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -978,7 +1327,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -990,7 +1343,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1002,7 +1359,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1014,7 +1375,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1026,7 +1391,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1038,7 +1407,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1050,7 +1423,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1062,7 +1439,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1074,7 +1455,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1086,7 +1471,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1098,7 +1487,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1110,7 +1503,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1122,7 +1519,11 @@
         "evidence_references_resolve": true,
         "confounding_disclosed": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1133,8 +1534,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1145,8 +1545,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1157,8 +1556,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1169,8 +1567,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1181,8 +1578,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1193,8 +1589,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1205,8 +1600,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1217,8 +1611,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1229,8 +1622,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1241,8 +1633,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1253,8 +1644,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1265,8 +1655,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1277,8 +1666,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1289,8 +1677,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1301,8 +1688,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1313,8 +1699,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1325,8 +1710,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1337,8 +1721,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1349,8 +1732,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1361,8 +1743,7 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "missing_controls_disclosed": true,
-        "budget_observed": true,
-        "unique_wells": true
+        "missing_controls_block_allocation": true
       },
       "passed": true
     },
@@ -1373,7 +1754,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1384,7 +1769,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1395,7 +1784,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1406,7 +1799,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1417,7 +1814,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1428,7 +1829,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1439,7 +1844,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1450,7 +1859,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1461,7 +1874,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1472,7 +1889,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1483,7 +1904,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1494,7 +1919,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1505,7 +1934,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1516,7 +1949,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1527,7 +1964,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1538,7 +1979,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1549,7 +1994,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1560,7 +2009,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1571,7 +2024,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     },
@@ -1582,7 +2039,11 @@
         "finite_serializable_report": true,
         "evidence_references_resolve": true,
         "budget_observed": true,
-        "unique_wells": true
+        "unique_wells": true,
+        "only_selected_materials_and_balanced_zones": true,
+        "exact_template_well_count": true,
+        "measured_control_roles_preserved": true,
+        "selection_order_invariant": true
       },
       "passed": true
     }

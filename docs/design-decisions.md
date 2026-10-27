@@ -50,3 +50,7 @@ For each substantive change, record its user problem, scope, evidence, important
 A handoff is another route by which a draft could become actionable. It therefore follows the same review boundary as the layout CSV: unreviewed assignments are omitted. The server recomputes allocations and compares source and layout identifiers before reviewed export. These identifiers detect ordinary stale-state mistakes; they are not signatures, authentication, or proof that an expert reviewed the experiment. Export metadata makes the proposal traceable without inventing that assurance. Sorting selected IDs before seeded allocation makes equivalent selections reproducible regardless of click order.
 
 The plate map uses one Tab stop with arrow navigation so inspecting 96 wells does not require 96 Tab presses. Empty wells remain inspectable and are described as unmeasured, preserving the distinction between missing data and zero.
+
+## Evaluation follows product constraints
+
+Held-out allocation checks now enter through the same validation path as the UI. Calling the lower-level allocator with generic controls in a missing-control scenario previously missed an important boundary: allocation should be blocked when measured control identities are absent. The evaluation now checks that boundary explicitly and independently counts material/zone allocations and verifies roles, budget, unique positions, and selection-order invariance for feasible cases. This improves integrity coverage; it does not supply scientific ground truth or an independent biological benchmark.
