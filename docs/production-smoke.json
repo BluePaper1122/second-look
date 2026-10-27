@@ -1,0 +1,14 @@
+{
+  "origin": "http://127.0.0.1:8088",
+  "checks": {
+    "health_responds": true,
+    "head_without_body": true,
+    "synthetic_plate_inspected": true,
+    "cross_origin_rejected": true,
+    "security_headers_present": true
+  },
+  "passed": true,
+  "model_configured": false,
+  "live_model_calls": 0,
+  "scope": "HTTP serving and local data flow only; not a public deployment, live-model, load, security-audit, or biological validation claim."
+}

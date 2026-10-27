@@ -134,6 +134,11 @@ class ProviderFailureTests(unittest.TestCase):
                 with self.assertRaises(AppError) as context: model_review(inspect(parse_csv(example())))
                 self.assertEqual((context.exception.code,context.exception.status),(code,status))
                 self.assertNotIn('private',str(context.exception))
+    def test_process_allowance_stops_calls_before_provider_use(self):
+        with patch.dict('os.environ',{'NEBIUS_API_KEY':'private','NEBIUS_MODEL':'nvidia/test','SECOND_LOOK_MAX_MODEL_CALLS':'1'}),patch('server.MODEL_TOTAL',1),patch('urllib.request.urlopen') as request:
+            with self.assertRaises(AppError) as context:model_review(inspect(parse_csv(example())))
+        self.assertEqual(context.exception.code,'model_allowance_exhausted')
+        request.assert_not_called()
     def test_timeout_is_retryable_but_never_a_success(self):
         with patch.dict('os.environ',{'NEBIUS_API_KEY':'private','NEBIUS_MODEL':'nvidia/test'}),patch('urllib.request.urlopen',side_effect=TimeoutError()):
             with self.assertRaises(AppError) as context: model_review(inspect(parse_csv(example())))

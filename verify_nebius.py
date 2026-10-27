@@ -7,6 +7,7 @@ from assay import example, parse_csv, inspect
 from agent_review import run_review
 from errors import AppError
 from server import model_json
+from local_config import load_local_configuration
 
 
 def main():
@@ -14,6 +15,10 @@ def main():
     parser.add_argument('--live-review',action='store_true',help='Make two provider inference calls using synthetic data; provider usage may be charged.')
     parser.add_argument('--output',type=Path,help='Write a verification record without credentials or private assay data.')
     args=parser.parse_args()
+    try:load_local_configuration()
+    except (OSError,ValueError):
+        print('Local configuration could not be loaded. Check its permissions or run setup_nebius.py again.')
+        return 2
     configured=bool(os.getenv('NEBIUS_API_KEY') and os.getenv('NEBIUS_MODEL'))
     record={'configured':configured,'live_verified':False,'data':'generated synthetic plate only'}
     if not configured:

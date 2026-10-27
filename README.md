@@ -56,11 +56,17 @@ The API distinguishes malformed or oversized uploads, missing control selections
 
 Reports include a version and content-derived identifier; layouts reference their source report. Suggested next actions link to reported findings and retain the scientist’s authority over assay acceptance. See [design decisions](docs/design-decisions.md). Public hosting remains unfinished.
 
+## Local credentials and hosted serving
+
+Use `python3 setup_nebius.py` for hidden local key entry; do not paste a key into chat or GitHub. The helper stores `.env.local` with user-only permissions. Local `server.py` and `verify_nebius.py` load it explicitly, while existing process environment variables take precedence. Production `serve.py` uses deployment environment secrets and does not load the local file. See [secure setup](docs/secure-setup.md).
+
+A separate WSGI gateway and hash-pinned Waitress launcher are available for a managed HTTPS environment. They share the local app’s business routes, enforce an exact configured origin/host, reject cross-origin requests and unsupported methods, and cap incoming work. Actual Waitress HTTP serving has been checked on loopback. No public host has been deployed, and the Docker image has not been built in this environment. See [deployment instructions](docs/deployment.md).
+
 ## Model configuration
 
 Configure the server environment with `NEBIUS_API_KEY` and `NEBIUS_MODEL`. Use an NVIDIA Nemotron model currently available to your Token Factory account. Do not put credentials in files committed to GitHub or paste them into the browser.
 
-The server contacts `https://api.tokenfactory.nebius.com/v1/chat/completions` only after the researcher requests a review. Each completed review uses two inference calls. First, the model requests one or two whitelisted, read-only analyses appropriate to the chosen objective: selected control-pair separation, selected sample measurements by position, or follow-up feasibility. Deterministic code checks the scope and computes the evidence. Second, the model selects existing findings, computed evidence IDs, and an allowed next step. Unsupported tools, substituted materials, unselected samples, duplicated calls, unrelated analyses, and invented references are rejected. Numbers and scientific explanations come from deterministic code. The model cannot alter the data, choose new follow-up samples, approve a layout, or run code. Changing selections or objective clears the previous review.
+The server contacts `https://api.tokenfactory.nebius.com/v1/chat/completions` only after the researcher requests a review. Each completed review uses two inference calls. A process-lifetime allowance defaults to 100 inference attempts (`SECOND_LOOK_MAX_MODEL_CALLS`); failures also consume this allowance. This is not a monetary cap and resets when the process restarts. Configure an account-level provider budget separately before public hosting. First, the model requests one or two whitelisted, read-only analyses appropriate to the chosen objective: selected control-pair separation, selected sample measurements by position, or follow-up feasibility. Deterministic code checks the scope and computes the evidence. Second, the model selects existing findings, computed evidence IDs, and an allowed next step. Unsupported tools, substituted materials, unselected samples, duplicated calls, unrelated analyses, and invented references are rejected. Numbers and scientific explanations come from deterministic code. The model cannot alter the data, choose new follow-up samples, approve a layout, or run code. Changing selections or objective clears the previous review.
 
 This workflow has been tested with scripted model responses. Live NVIDIA/Nebius compatibility and model quality remain unverified. To perform an explicit synthetic-only check after configuration, run `python3 verify_nebius.py --live-review --output docs/live-verification.json`. Without `--live-review`, the command only reports configuration state and makes no provider call. It exits with code 2 until a live review is verified. Provider usage may be charged; no inference request is automatically retried.
 
@@ -74,7 +80,7 @@ Review files contain the original measurements and notes. Saving is explicit; th
 
 Uploads remain in request memory; application access logging is disabled. The browser holds the current CSV until replaced or the tab is closed. Optional live review sends the computed summary (including sample IDs and referenced wells) to Nebius. Use only data you are authorized to share. Exports remain the user's responsibility. No private research datasets are bundled.
 
-The standard-library server is intended for local development. Before public hosting, add production serving, TLS, request concurrency limits, API rate limiting, cost controls, and a clear data notice. A public demo must use synthetic examples by default. Do not expose this development server directly to the internet.
+The standard-library server is intended for local development. Before public hosting, provision a managed TLS gateway, set the exact public origin and environment secrets, configure account-level spending limits, verify the hosted routes and live inference, and maintain judge access. Production serving and application-level request/model limits are implemented, but public hosting remains unverified. A public demo must use synthetic examples by default. Do not expose this development server directly to the internet.
 
 ## External instrument-data case
 
