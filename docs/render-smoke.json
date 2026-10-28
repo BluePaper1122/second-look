@@ -16,5 +16,5 @@
   "passed": true,
   "model_configured": false,
   "live_model_calls": 0,
-  "scope": "HTTP serving and local data flow only; not a public deployment, live-model, load, security-audit, or biological validation claim."
+  "scope": "HTTP serving and synthetic data flow at the recorded origin only; does not establish ongoing availability, live-model quality, load capacity, a security audit, or biological validity."
 }

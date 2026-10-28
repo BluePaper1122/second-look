@@ -4,7 +4,7 @@ This is a reviewable research prototype. It is not yet ready for a final submiss
 
 ## Ten-minute product review
 
-1. Run `python3 server.py` and open http://127.0.0.1:8765.
+1. Open https://second-look-qz70.onrender.com/ (the Free instance may need time to wake), or run `python3 start.py` locally. Use the supplied examples on the public demo.
 2. Load **Confounded sample layout**, then inspect the plate. Read the identity/position limitation and its supporting measurements. A position association does not prove an artifact.
 3. Enter the well map with Tab. Use arrows and Home/End; Control+Home/End reaches the first/last well. Tab leaves the map.
 4. Select both candidate samples, retain the two measured control materials, and design a follow-up with a 24-well budget. Expect 16 allocated wells: four per sample and four per control.
@@ -22,8 +22,8 @@ This is a reviewable research prototype. It is not yet ready for a final submiss
 
 - Account owner configures Nebius locally using [secure setup](secure-setup.md), then runs the synthetic-only live verifier. Never put a key in chat or GitHub.
 - Verify the actual NVIDIA model responses, both inference stages, failure recovery, and usefulness against deterministic QC using the [model evaluation protocol](model-evaluation.md).
-- Complete browser download, responsive, and assistive-technology checks.
+- Broaden browser/device coverage and complete assistive-technology checks. Basic browser downloads and scoped responsive containment already passed.
 - Obtain domain review of scientific wording and design assumptions; do not claim biological validation.
-- If a public demo is needed, provision an authorized host, TLS, secrets, provider spending controls, and judge access. Local Waitress serving has been tested; public hosting and Docker execution have not.
+- The Free Render public HTTPS demo passed synthetic serving/export checks. Configure live secrets securely, review provider and Render usage controls, and maintain judge access. Docker execution remains unverified.
 - Record the factual under-three-minute demo using [recording script](demo-script.md) and [submission draft](submission-draft.md). Show live model use only after verification; do not substitute scripted responses without disclosure.
 - User reviews project, eligibility, required assets, and final entry. The agent does not submit the hackathon entry.
