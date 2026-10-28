@@ -1,5 +1,7 @@
 """Synthetic-only serving check. Never calls a model or reads private assay files."""
 import argparse
+import csv
+import io
 import json
 from pathlib import Path
 import sys
@@ -44,6 +46,32 @@ def main():
                 'synthetic_plate_inspected':inspect_status==200 and len(report.get('rows',[]))==96,
                 'cross_origin_rejected':denied_status==403 and denied.get('code')=='cross_origin',
                 'security_headers_present':all(inspect_headers.get(name) for name in ('Content-Security-Policy','Cache-Control','Referrer-Policy','X-Request-ID'))}
+        settings={'csv':example(),'samples':['candidate_edge','candidate_interior'],
+                  'controls':{'negative':'negative_control','positive':'positive_control'},'budget':24,'seed':11}
+        plan_status,_,raw=request('/api/plan','POST',settings,{'Origin':origin})
+        layout=json.loads(raw)
+        review={**settings,'source_report_id':layout.get('source_report_id'),'layout_id':layout.get('layout_id'),'reviewed':True}
+        blocked_status,_,raw=request('/api/export-plan','POST',{**review,'reviewed':False},{'Origin':origin})
+        blocked=json.loads(raw)
+        export_status,_,raw=request('/api/export-plan','POST',review,{'Origin':origin})
+        exported=json.loads(raw)
+        allocations=list(csv.DictReader(io.StringIO(exported.get('csv',''))))
+        handoff_status,_,raw=request('/api/export-handoff','POST',{**settings,'layout_present':True},{'Origin':origin})
+        handoff=json.loads(raw)
+        stale_status,_,raw=request('/api/export-plan','POST',{**review,'seed':12},{'Origin':origin})
+        stale=json.loads(raw)
+        checks.update({
+            'synthetic_layout_allocated':plan_status==200 and layout.get('used')==16,
+            'unreviewed_export_rejected':blocked_status==400 and blocked.get('code')=='review_required',
+            'reviewed_csv_received_and_parsed':export_status==200 and len(allocations)==16,
+            'export_metadata_preserved':bool(allocations) and all(
+                row.get('source_report_id')==layout.get('source_report_id') and row.get('layout_id')==layout.get('layout_id')
+                and row.get('review_status')=='researcher_attested' and row.get('randomization_seed')=='11'
+                and row.get('well_budget')=='24' and bool(row.get('exported_at_utc')) for row in allocations),
+            'unreviewed_handoff_assignments_omitted':handoff_status==200 and handoff.get('includes_reviewed_layout') is False
+                and 'UNREVIEWED FOLLOW-UP DRAFT' in handoff.get('text','') and 'technical_replicate' not in handoff.get('text',''),
+            'stale_export_rejected':stale_status==409 and stale.get('code')=='stale_layout',
+        })
         result={'origin':origin,'checks':checks,'passed':all(checks.values()),'model_configured':bool(health.get('model_configured')),
                 'live_model_calls':0,'scope':'HTTP serving and local data flow only; not a public deployment, live-model, load, security-audit, or biological validation claim.'}
     except (OSError,ValueError,KeyError,urllib.error.URLError):

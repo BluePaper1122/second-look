@@ -5,7 +5,13 @@
     "head_without_body": true,
     "synthetic_plate_inspected": true,
     "cross_origin_rejected": true,
-    "security_headers_present": true
+    "security_headers_present": true,
+    "synthetic_layout_allocated": true,
+    "unreviewed_export_rejected": true,
+    "reviewed_csv_received_and_parsed": true,
+    "export_metadata_preserved": true,
+    "unreviewed_handoff_assignments_omitted": true,
+    "stale_export_rejected": true
   },
   "passed": true,
   "model_configured": false,

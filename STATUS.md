@@ -1,11 +1,11 @@
 # Second Look — implementation status
 
-Updated October 27, 2026 (America/Chicago).
+Updated October 28, 2026 (America/Chicago).
 
 ## Working now
 
 - Python standard-library local server and responsive browser interface.
-- Shared route layer plus a separate WSGI deployment gateway, exact origin/Host checks, request limits, security headers, and a hash-pinned Waitress launcher. Actual Waitress HTTP serving was verified on loopback with synthetic inspection, HEAD, health, headers, and cross-origin rejection; no public deployment is claimed.
+- Shared route layer plus a separate WSGI deployment gateway, exact origin/Host checks, request limits, security headers, and a hash-pinned Waitress launcher. Actual Waitress HTTP serving was verified on loopback with synthetic inspection, HEAD, health, headers, and cross-origin rejection. The expanded smoke check also received and parsed a 16-row reviewed CSV, verified its trace metadata, rejected missing review and stale settings, and confirmed that unreviewed handoffs omit assignments. All 11 HTTP checks passed with zero inference calls; no public deployment or browser-file-download success is claimed.
 - Secure interactive local Nebius setup with hidden entry, atomic user-only configuration, explicit loading, no shell execution, and ignored secret files. No real credentials were entered. Production uses host environment secrets only.
 - A default 100-attempt process-lifetime inference allowance complements concurrency and per-minute limits. It is not a monetary cap and resets on restart; provider-side billing controls are still needed.
 - CSV column mapping, strict single-plate validation, missing-data handling.

@@ -13,7 +13,7 @@ python3 -m venv .venv
 
 Set `SECOND_LOOK_PUBLIC_ORIGIN` to `http://127.0.0.1:8088` and `PORT` to `8088` for local verification, then run `.venv/bin/python serve.py`. It binds to loopback by default. Production serving deliberately uses process environment secrets and does not load `.env.local`.
 
-Verify with `python3 scripts/smoke_http.py --url http://127.0.0.1:8088`. This uses generated synthetic data and makes no inference calls. The recorded local result is in `production-smoke.json`.
+Verify with `python3 scripts/smoke_http.py --url http://127.0.0.1:8088`. This uses generated synthetic data and makes no inference calls. It checks layout allocation, receives/parses reviewed CSV content and metadata, rejects unreviewed/stale exports, and verifies unreviewed handoff omission in addition to serving/origin checks. It does not exercise browser file-saving policy. The recorded local result is in `production-smoke.json`.
 
 ## Deployment requirements
 
