@@ -69,3 +69,14 @@ class AgentReviewTests(unittest.TestCase):
     def test_partial_completion_not_presented_as_success(self):
         outputs=iter([{'mode':'live','model':'test','payload':self.plan},{'mode':'unavailable'}])
         with self.assertRaises(AppError):run_review(self.rows,self.report,'position',self.settings,lambda _:next(outputs))
+
+    def test_final_selection_cannot_discard_objective_evidence(self):
+        mixed={'tool_calls':self.plan['tool_calls']+[{'name':'design_feasibility','arguments':{}}]}
+        with self.assertRaises(AppError) as caught:
+            self.run_script(plan=mixed,result={**self.result,'evidence_ids':['analysis_2']})
+        self.assertEqual(caught.exception.code,'agent_objective_mismatch')
+    def test_final_selection_accepts_objective_evidence_in_either_position(self):
+        mixed={'tool_calls':[{'name':'design_feasibility','arguments':{}}]+self.plan['tool_calls']}
+        result,requests=self.run_script(plan=mixed,result={**self.result,'evidence_ids':['analysis_2']})
+        self.assertEqual(result['selected_evidence'],['analysis_2'])
+        self.assertEqual(requests[1]['required_evidence_ids'],['analysis_2'])

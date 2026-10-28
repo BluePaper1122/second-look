@@ -58,3 +58,7 @@ Held-out allocation checks now enter through the same validation path as the UI.
 ## Export recovery when browsers block automatic downloads
 
 After asynchronous server validation, browser policy may prevent an automatic download. A persistent, attached link now exposes the prepared file and its name so the researcher can initiate it directly. A short-lived detached link offered no visible recovery path. Only the most recent file URL remains active, and changes to plate or follow-up settings revoke it to avoid presenting stale output as current. Browser checks verified link creation and budget-change removal; actual downloaded-file inspection remains outstanding because the download-wait tooling timed out. Narrow and desktop containment were checked separately, without claiming full accessibility conformance.
+
+## Preserve the review objective through final selection
+
+A two-analysis plan could compute the requested position analysis, then cite only feasibility in its final selection. Valid references alone therefore did not guarantee even structural relevance to the user’s question. The final selection now must include at least one computed analysis of the required type, and the second-stage prompt names those required evidence IDs. Scripted counterexamples verify rejection of unrelated-only selections and acceptance when objective evidence is the second analysis. This is a structural constraint, not proof that the chosen recommendation is scientifically useful; live evaluation remains required.

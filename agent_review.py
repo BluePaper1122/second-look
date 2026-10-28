@@ -3,7 +3,7 @@ from analysis_tools import CATALOG, execute_tool
 from errors import AppError
 from workflow import decision_summary
 
-AGENT_VERSION='0.1.0'
+AGENT_VERSION='0.1.1'
 
 OBJECTIVES={'position':'Check whether sample position limits interpretation.',
             'controls':'Review the selected control materials.',
@@ -55,9 +55,10 @@ def run_review(rows, report, objective, settings, call_model):
         raise AppError('agent_objective_mismatch','The requested analyses did not address your selected objective. No review was accepted.',502,True)
     workflow=decision_summary(report,rows)
     allowed_actions={a['finding_code']:a for a in workflow['actions']}
-    stage_two=call_model({'task':'Use these computed results to select the next review step. Return ONLY JSON {"priorities":["existing_finding_code"],"evidence_ids":["analysis_1"],"next_action":"existing_action_code or researcher_review"}. Select one to three existing findings, one or two distinct available evidence IDs, and one allowed next action. Do not generate numbers, conclusions, or additional text. The researcher decides whether a follow-up is appropriate.',
+    objective_evidence_ids={e['id'] for e in evidence if e['name']==expected}
+    stage_two=call_model({'task':'Use these computed results to select the next review step. Return ONLY JSON {"priorities":["existing_finding_code"],"evidence_ids":["analysis_1"],"next_action":"existing_action_code or researcher_review"}. Select one to three existing findings, one or two distinct available evidence IDs including at least one required_evidence_id for the objective, and one allowed next action. Do not generate numbers, conclusions, or additional text. The researcher decides whether a follow-up is appropriate.',
                          'objective':OBJECTIVES[objective],'findings':report['findings'],'computed_analyses':evidence,
-                         'allowed_next_actions':list(allowed_actions)+['researcher_review']})
+                         'allowed_next_actions':list(allowed_actions)+['researcher_review'],'required_evidence_ids':sorted(objective_evidence_ids)})
     if stage_two['mode']!='live':
         raise AppError('agent_incomplete','The review did not complete both stages. No complete model review was accepted; local findings remain available.',502,True)
     payload=stage_two['payload']
@@ -69,6 +70,8 @@ def run_review(rows, report, objective, settings, call_model):
         raise AppError('agent_evidence_invalid','The model referenced unsupported findings. The response was rejected.',502,True)
     if not isinstance(refs,list) or not 1<=len(refs)<=2 or any(not isinstance(c,str) or c not in evidence_ids for c in refs) or len(set(refs))!=len(refs):
         raise AppError('agent_evidence_invalid','The model referenced uncomputed analyses. The response was rejected.',502,True)
+    if not objective_evidence_ids.intersection(refs):
+        raise AppError('agent_objective_mismatch','The selected evidence did not address your review objective. No model review was accepted; local findings remain available.',502,True)
     if not isinstance(action,str) or action not in set(allowed_actions)|{'researcher_review'}:
         raise AppError('agent_action_invalid','The model proposed an unsupported next step. The response was rejected.',502,True)
     return {'mode':'live','model':stage_two['model'],'objective':objective,'priorities':priorities,
