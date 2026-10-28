@@ -1,6 +1,8 @@
 'use strict';
 const $ = id => document.getElementById(id);
 let current = null, layout = null, provenance = 'Uploaded data; provenance not verified';
+let downloadUrl = null;
+function clearDownload(){if(downloadUrl)URL.revokeObjectURL(downloadUrl);downloadUrl=null;$('downloadReady').replaceChildren();$('downloadReady').hidden=true;}
 const fields = ['plate_id','well','sample_id','value','control'];
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function notice(text,error=false){$('notice').textContent=text;$('notice').classList.toggle('error',error);$('notice').setAttribute('role',error?'alert':'status');if(error)$('notice').focus();}
@@ -13,7 +15,7 @@ async function request(path,data){
 }
 const api=(path,data)=>request(path,data);
 function input(){return {csv:$('csv').value,mapping:Object.fromEntries(fields.map(f=>[f,$('map_'+f)?$('map_'+f).value:f]))};}
-function invalidate(){current=null;layout=null;$('results').hidden=true;$('modelStatus').textContent='No live review has been performed.';$('priorities').replaceChildren();$('planResult').replaceChildren();}
+function invalidate(){clearDownload();current=null;layout=null;$('results').hidden=true;$('modelStatus').textContent='No live review has been performed.';$('priorities').replaceChildren();$('planResult').replaceChildren();}
 function csvHeaders(text){
  const cells=[];let cell='',quoted=false;
  for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){cell+='"';i++;}else quoted=!quoted;}
@@ -23,7 +25,16 @@ function csvHeaders(text){
 function mapping(){invalidate();let names;try{names=csvHeaders($('csv').value.replace(/^\uFEFF/,''));}catch(e){$('mapping').replaceChildren();notice(e.message,true);return;}
  $('mapping').innerHTML=fields.map(f=>`<label>${esc(f)}<select id="map_${f}"><option value="">Choose a column</option>${names.map(n=>`<option ${n===f?'selected':''} value="${esc(n)}">${esc(n)}</option>`).join('')}</select></label>`).join('');for(const f of fields)$('map_'+f).onchange=invalidate;
 }
-function download(name,text,type){const u=URL.createObjectURL(new Blob([text],{type}));const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
+function download(name,text,type){
+ clearDownload();downloadUrl=URL.createObjectURL(new Blob([text],{type}));
+ const link=document.createElement('a');link.href=downloadUrl;link.download=name;
+ link.textContent='Download '+name;
+ const explanation=document.createElement('p');explanation.textContent='Your file is ready. If the download did not start, use this link. It is replaced by the next export and cleared when the plate or follow-up settings change.';
+ $('downloadReady').append(explanation,link);$('downloadReady').hidden=false;
+ // Keep an attached, keyboard-accessible link for browsers that block an
+ // automatic download following the asynchronous export validation request.
+ link.click();
+}
 async function busy(id,fn){const controls=[...document.querySelectorAll('button,input,select,textarea')];const states=controls.map(e=>e.disabled);controls.forEach(e=>e.disabled=true);try{await fn();}catch(e){notice(e.message,true);}finally{controls.forEach((e,i)=>e.disabled=states[i]);if(current)$('plan').disabled=!current.report.samples.length||['negative','positive'].some(role=>!current.report.control_ids[role].length);}}
 $('load').onclick=()=>busy('load',async()=>{const v=await request('/api/example?kind='+encodeURIComponent($('example').value));$('csv').value=v.csv;provenance=v.synthetic?'Synthetic demonstration · '+$('example').selectedOptions[0].textContent:v.description+' License: '+v.license;$('provenance').textContent=provenance;mapping();if(v.source_url){const link=document.createElement('a');link.href=v.source_url;link.textContent=' Upstream source';link.target='_blank';link.rel='noopener noreferrer';$('provenance').append(link);}notice(v.synthetic?'Synthetic plate loaded. Inspect it when you’re ready.':'Real calibration readings loaded. This case tests compatibility and missing-control handling, not biological validity.');});
 $('file').onchange=()=>busy('inspect',async()=>{const file=$('file').files[0];if(!file)return;if(file.size>1e6)throw Error('Choose a CSV smaller than 1 MB.');try{$('csv').value=new TextDecoder('utf-8',{fatal:true}).decode(await file.arrayBuffer());}catch{throw Error('This file is not readable UTF-8 CSV. Export it with UTF-8 encoding and retry.');}provenance='Uploaded data · '+file.name+' · provenance not verified';$('provenance').textContent=provenance;mapping();notice('Your plate is ready. Confirm the columns, then inspect.');});
@@ -96,7 +107,7 @@ $('reportDownload').onclick=()=>busy('reportDownload',async()=>{
  notice(result.includes_reviewed_layout?'Handoff prepared with the reviewed proposal and source identifiers.':'Handoff prepared. Unreviewed well assignments are not included.');
 });
 
-function clearPlan(){layout=null;$('planResult').replaceChildren();$('priorities').replaceChildren();$('modelStatus').textContent='Settings changed. Request a new model review if needed.';}
+function clearPlan(){clearDownload();layout=null;$('planResult').replaceChildren();$('priorities').replaceChildren();$('modelStatus').textContent='Settings changed. Request a new model review if needed.';}
 $('budget').oninput=clearPlan;
 
 request('/api/status').then(s=>{if(!s.model_configured){$('modelStatus').textContent='Live model review is not configured. Local analysis and follow-up design are available.';}}).catch(()=>{});

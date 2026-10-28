@@ -18,3 +18,5 @@ h1{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;font-size:clamp(
 .controls>label{min-width:0;max-width:100%}
 .sample-choice{max-width:100%;overflow-wrap:anywhere}
 .sample-choice input{flex-shrink:0}
+
+.download-ready{padding:16px 20px;border:1px solid var(--line);border-radius:8px;background:#fffef9;margin-bottom:22px;overflow-wrap:anywhere}.download-ready p{font-size:13px;margin:0 0 8px}.download-ready a{color:var(--green);font-weight:600;font-size:14px}

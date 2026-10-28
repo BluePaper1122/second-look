@@ -54,3 +54,7 @@ The plate map uses one Tab stop with arrow navigation so inspecting 96 wells doe
 ## Evaluation follows product constraints
 
 Held-out allocation checks now enter through the same validation path as the UI. Calling the lower-level allocator with generic controls in a missing-control scenario previously missed an important boundary: allocation should be blocked when measured control identities are absent. The evaluation now checks that boundary explicitly and independently counts material/zone allocations and verifies roles, budget, unique positions, and selection-order invariance for feasible cases. This improves integrity coverage; it does not supply scientific ground truth or an independent biological benchmark.
+
+## Export recovery when browsers block automatic downloads
+
+After asynchronous server validation, browser policy may prevent an automatic download. A persistent, attached link now exposes the prepared file and its name so the researcher can initiate it directly. A short-lived detached link offered no visible recovery path. Only the most recent file URL remains active, and changes to plate or follow-up settings revoke it to avoid presenting stale output as current. Browser checks verified link creation and budget-change removal; actual downloaded-file inspection remains outstanding because the download-wait tooling timed out. Narrow and desktop containment were checked separately, without claiming full accessibility conformance.
