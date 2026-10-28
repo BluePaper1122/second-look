@@ -73,7 +73,7 @@ def main():
             'stale_export_rejected':stale_status==409 and stale.get('code')=='stale_layout',
         })
         result={'origin':origin,'checks':checks,'passed':all(checks.values()),'model_configured':bool(health.get('model_configured')),
-                'live_model_calls':0,'scope':'HTTP serving and local data flow only; not a public deployment, live-model, load, security-audit, or biological validation claim.'}
+                'live_model_calls':0,'scope':'HTTP serving and synthetic data flow at the recorded origin only; does not establish ongoing availability, live-model quality, load capacity, a security audit, or biological validity.'}
     except (OSError,ValueError,KeyError,urllib.error.URLError):
         result={'origin':origin,'passed':False,'live_model_calls':0,'message':'The serving check could not complete. Confirm the process, configured origin and port, and retry.'}
     if args.output:

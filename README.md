@@ -2,7 +2,9 @@
 
 Review a 96-well assay plate and plan a follow-up that checks whether sample position could explain a result.
 
-**Status:** local research prototype. Deterministic analysis and layout generation work. Live NVIDIA Nemotron calls are implemented but have not been verified with a real Nebius account. Synthetic examples are accompanied by a separately licensed, provenance-tracked real calibration compatibility case. No biological validity has been established. This is not a validated scientific or clinical product.
+**Demo:** https://second-look-qz70.onrender.com/ (Free Render instance; may take about a minute to wake). Use the included examples for review.
+
+**Status:** research prototype. Deterministic analysis and layout generation work. Live NVIDIA Nemotron calls are implemented but have not been verified with a real Nebius account. Synthetic examples are accompanied by a separately licensed, provenance-tracked real calibration compatibility case. No biological validity has been established. This is not a validated scientific or clinical product.
 
 ## Run locally
 
@@ -54,7 +56,7 @@ The user chooses the sample IDs; none are preselected. Follow-up designs require
 
 The API distinguishes malformed or oversized uploads, missing control selections, impossible budgets, unsupported inputs, provider authorization/credit issues, rate limits, timeouts, invalid model output, and unexpected failures. Errors include a recovery message, stable code, retryability, and a request reference. Responses never expose provider error bodies or credentials. Closed browser connections are handled; concurrent requests and model work are bounded. No provider request is automatically retried, to avoid hidden duplicate usage. Browser input and local results remain available after a model failure.
 
-Reports include a version and content-derived identifier; layouts reference their source report. Suggested next actions link to reported findings and retain the scientist’s authority over assay acceptance. See [design decisions](docs/design-decisions.md). Public hosting remains unfinished.
+Reports include a version and content-derived identifier; layouts reference their source report. Suggested next actions link to reported findings and retain the scientist’s authority over assay acceptance. See [design decisions](docs/design-decisions.md). The Render demo has passed the synthetic HTTPS checks; live model use remains unverified.
 
 ## Local credentials and hosted serving
 
@@ -78,7 +80,7 @@ Review files contain the original measurements and notes. Saving is explicit; th
 
 ## Privacy and deployment
 
-Uploads remain in request memory; application access logging is disabled. The browser holds the current CSV until replaced or the tab is closed. Optional live review sends the computed summary (including sample IDs and referenced wells) to Nebius. Use only data you are authorized to share. Exports remain the user's responsibility. No private research datasets are bundled.
+Inspection sends CSVs to the application server. In the hosted demo that server runs on Render; processing is not confined to your browser. Uploads remain in request memory; application access logging is disabled. The browser holds the current CSV until replaced or the tab is closed. Optional live review sends the computed summary (including sample IDs and referenced wells) to Nebius. Use only data you are authorized to share. Exports remain the user's responsibility. No private research datasets are bundled.
 
 The standard-library server is intended for local development. Before public hosting, provision a managed TLS gateway, set the exact public origin and environment secrets, configure account-level spending limits, verify the hosted routes and live inference, and maintain judge access. Production serving and application-level request/model limits are implemented, but public hosting remains unverified. A public demo must use synthetic examples by default. Do not expose this development server directly to the internet.
 

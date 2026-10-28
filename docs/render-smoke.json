@@ -1,0 +1,20 @@
+{
+  "origin": "https://second-look-qz70.onrender.com",
+  "checks": {
+    "health_responds": true,
+    "head_without_body": true,
+    "synthetic_plate_inspected": true,
+    "cross_origin_rejected": true,
+    "security_headers_present": true,
+    "synthetic_layout_allocated": true,
+    "unreviewed_export_rejected": true,
+    "reviewed_csv_received_and_parsed": true,
+    "export_metadata_preserved": true,
+    "unreviewed_handoff_assignments_omitted": true,
+    "stale_export_rejected": true
+  },
+  "passed": true,
+  "model_configured": false,
+  "live_model_calls": 0,
+  "scope": "HTTP serving and local data flow only; not a public deployment, live-model, load, security-audit, or biological validation claim."
+}

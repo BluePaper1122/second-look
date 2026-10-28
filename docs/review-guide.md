@@ -21,7 +21,7 @@ This is a reviewable research prototype. It is not yet ready for a final submiss
 ## Release gates
 
 - Account owner configures Nebius locally using [secure setup](secure-setup.md), then runs the synthetic-only live verifier. Never put a key in chat or GitHub.
-- Verify the actual NVIDIA model responses, both inference stages, failure recovery, and usefulness against deterministic QC.
+- Verify the actual NVIDIA model responses, both inference stages, failure recovery, and usefulness against deterministic QC using the [model evaluation protocol](model-evaluation.md).
 - Complete browser download, responsive, and assistive-technology checks.
 - Obtain domain review of scientific wording and design assumptions; do not claim biological validation.
 - If a public demo is needed, provision an authorized host, TLS, secrets, provider spending controls, and judge access. Local Waitress serving has been tested; public hosting and Docker execution have not.

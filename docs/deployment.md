@@ -1,6 +1,10 @@
-# Hosted serving preparation
+# Hosted serving
 
-**Current evidence:** the hash-pinned Waitress server has run successfully on loopback, including page/health delivery, real synthetic-plate inspection, HEAD behavior, security headers, and cross-origin rejection. The WSGI gateway also passes protocol validation and automated recovery checks. No public host, managed TLS route, or Docker image build has been verified. A production deployment and judge access remain outstanding.
+**Render demo:** https://second-look-qz70.onrender.com/ — deployed October 28, 2026 from commit fcfd5c6. Native Python with hash-pinned Waitress, Free compute ($0/month selected), manual deployments, and `/api/status` health check. All 11 synthetic HTTPS smoke checks passed through the public gateway, including reviewed export contents and stale/unreviewed rejection. See `render-smoke.json`. No model key was configured and no inference call was made. UI/privacy wording changes after this revision require manual deployment before they appear publicly.
+
+Free compute sleeps after inactivity and can have a cold-start delay. Render also imposes workspace usage quotas; the $0 compute selection is not a guarantee against all account-level overages. No paid compute plan was selected and no payment details were added. Keep usage within the account’s included allowances; review billing controls before enabling public model use. Uploaded example data is synthetic; hosted inspection sends CSVs to the Render app server, not solely the visitor’s device. Application logic holds it in request memory without intentional database storage; infrastructure data handling remains subject to Render’s policies.
+
+The native-Python settings are recorded in `render.yaml`; the service was created manually in the authorized Render account. The server-supplied `RENDER_EXTERNAL_URL` supplies the exact public origin. Automatic deployment is off. Verify each manually deployed source revision, and keep judge access available. Live NVIDIA/Nebius verification, model usefulness, Docker execution, load testing, and biological validity remain unverified.
 
 ## Run the production server locally
 
@@ -17,7 +21,7 @@ Verify with `python3 scripts/smoke_http.py --url http://127.0.0.1:8088`. This us
 
 ## Deployment requirements
 
-Use a host that runs a persistent Python/WSGI process or the provided container behind a managed HTTPS gateway. The operator must provide the host/account and authorize any charges; this project has not created paid resources.
+Use a host that runs a persistent Python/WSGI process or the provided container behind a managed HTTPS gateway. The user selected Render and authorized deployment there. No paid compute plan was selected. Budget approval is required before any paid upgrade.
 
 Set these environment values on that host:
 
