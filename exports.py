@@ -61,7 +61,7 @@ def handoff(rows,report,data):
     if not notes:lines.append('  | No researcher notes supplied.')
     lines.extend(['','REPEATED MEASUREMENTS BY POSITION'])
     for summary in report['replicate_summaries']:
-        lines.append(summary['sample_id']+' | '+summary['role']+' | '+summary['zone'])
+        lines.append('Sample ID: '+json.dumps(summary['sample_id'],ensure_ascii=True)+' | '+summary['role']+' | '+summary['zone'])
         for ref in summary['evidence']:lines.append(ref+': '+json.dumps(report['facts'][ref],ensure_ascii=False))
     lines.extend(['','LIMITS','Spatial associations do not establish causation. Technical wells do not establish biological replication. Compatibility and synthetic integrity checks do not establish scientific validity.'])
     included=False

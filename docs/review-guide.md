@@ -16,7 +16,7 @@ This is a reviewable research prototype. It is not yet ready for a final submiss
 
 ## Evidence available
 
-99 automated tests pass, including local HTTP export validation and stale-review rejection. The held-out evaluation contains 140 synthetic integrity cases; it is not a biological or live-model performance benchmark. Browser keyboard navigation was checked. Actual export-file download verification remains incomplete because the browser automation timed out; endpoint tests passed. A prepared-file link remains available if automatic download does not start, and clears when plate/settings change. The link and clearing behavior were checked in the browser. Scoped width checks at 390 and 1280 pixels showed contained plate scrolling with no page-wide horizontal overflow. Full screen-reader and broader mobile verification remain pending.
+100 automated tests pass, including local HTTP export validation and stale-review rejection. The held-out evaluation contains 140 synthetic integrity cases; it is not a biological or live-model performance benchmark. Browser keyboard navigation was checked. Actual synthetic handoff and reviewed CSV files were saved through the explicit browser link and inspected; expected source metadata and 16 unique CSV wells were verified. Earlier download-event waits timed out; direct file-link saving succeeded. A prepared-file link remains available if automatic download does not start, and clears when plate/settings change. The link and clearing behavior were checked in the browser. Scoped width checks at 390 and 1280 pixels showed contained plate scrolling with no page-wide horizontal overflow. Full screen-reader and broader mobile verification remain pending.
 
 ## Release gates
 

@@ -9,10 +9,10 @@ Review a 96-well assay plate and plan a follow-up that checks whether sample pos
 Requires Python 3.11 or newer. No third-party Python packages are required.
 
 ```sh
-python3 server.py
+python3 start.py
 ```
 
-Open http://127.0.0.1:8765. To use another port, set `PORT`. The server binds to loopback only and is not a production public host.
+The launcher opens http://127.0.0.1:8765 and explains how to stop the server. Use `python3 start.py --port 8766` if that port is occupied, or `--no-browser` to open the page yourself. See the [five-minute first run](docs/first-run.md). The original `python3 server.py` command remains available; it also respects `PORT`. The server binds to loopback only and is not a production public host.
 
 ```sh
 python3 -m unittest discover -s tests -v

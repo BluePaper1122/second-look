@@ -62,3 +62,11 @@ After asynchronous server validation, browser policy may prevent an automatic do
 ## Preserve the review objective through final selection
 
 A two-analysis plan could compute the requested position analysis, then cite only feasibility in its final selection. Valid references alone therefore did not guarantee even structural relevance to the user’s question. The final selection now must include at least one computed analysis of the required type, and the second-stage prompt names those required evidence IDs. Scripted counterexamples verify rejection of unrelated-only selections and acceptance when objective evidence is the second analysis. This is a structural constraint, not proof that the chosen recommendation is scientifically useful; live evaluation remains required.
+
+## First-run and recovery clarity
+
+The local launcher shares the existing server entry point, validates its explicit port, and prints the address and stop instructions. Opening a browser is optional; it does not install packages, silently choose another port, terminate a competing process, or call a model. The first-run guide separates a usable synthetic local workflow from account-dependent live inference. Handoff IDs are JSON-quoted so data containing line breaks remains data rather than becoming a report heading. A fresh model request clears the old response before making the call; retaining it after an unavailable retry would blur which attempt produced the visible evidence.
+
+## Render demo configuration
+
+The user chose Render. A native Python Free service uses the already tested Waitress transport rather than introducing another application framework. The exact public origin comes from Render’s server-provided RENDER_EXTERNAL_URL in the start command, preserving Host and Origin checks without trusting request forwarding headers. Auto-deploy is disabled to keep public review on an explicitly deployed revision. No model key is bundled. Free instances sleep and have quotas; their process restart resets application call counts, so these counts must never be described as billing caps. Public deployment still requires actual verification and account usage review.

@@ -1,0 +1,18 @@
+# No model secret is included. Enable live inference only after owner setup.
+services:
+  - type: web
+    name: second-look
+    runtime: python
+    plan: free
+    branch: main
+    autoDeployTrigger: off
+    buildCommand: pip install --require-hashes -r requirements-production.txt
+    startCommand: SECOND_LOOK_PUBLIC_ORIGIN="$RENDER_EXTERNAL_URL" python serve.py
+    healthCheckPath: /api/status
+    envVars:
+      - key: SECOND_LOOK_BIND_HOST
+        value: 0.0.0.0
+      - key: SECOND_LOOK_MAX_MODEL_CALLS
+        value: "100"
+      - key: SECOND_LOOK_REQUESTS_PER_MINUTE
+        value: "120"

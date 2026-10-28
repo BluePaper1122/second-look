@@ -267,22 +267,34 @@ class Handler(APIRoutes,BaseHTTPRequestHandler):
     def do_POST(self): self.dispatch('POST')
     def log_message(self,fmt,*args): pass
 
-if __name__=='__main__':
+def main(open_browser=False,port_override=None):
     from local_config import load_local_configuration
     try:load_local_configuration()
     except (OSError,ValueError):raise SystemExit('Local credential configuration could not be loaded. Run setup_nebius.py again or check its file permissions.') from None
     try:
-        port=int(os.getenv('PORT','8765'))
+        port=int(port_override if port_override is not None else os.getenv('PORT','8765'))
         if not 1<=port<=65535: raise ValueError()
         server=LocalServer(('127.0.0.1',port),Handler)
     except ValueError:
         raise SystemExit('PORT must be an integer from 1 to 65535.') from None
     except OSError:
         raise SystemExit('Cannot start the local server. The port may be in use or unavailable; choose another PORT.') from None
-    print(f'Second Look: http://127.0.0.1:{port}',flush=True)
+    url=f'http://127.0.0.1:{port}'
+    print(f'Second Look is ready: {url}',flush=True)
+    print('Keep this terminal open. Press Control+C here to stop. Local inspection needs no API key.',flush=True)
+    if open_browser:
+        import webbrowser
+        def open_page():
+            try:opened=webbrowser.open(url)
+            except Exception:opened=False
+            if not opened:print('Open the address above in your browser to continue.',flush=True)
+        threading.Thread(target=open_page,daemon=True).start()
     try:
         server.serve_forever()
     except KeyboardInterrupt:
         print('\nSecond Look stopped. No uploaded files were saved by the server.')
     finally:
         server.server_close()
+
+
+if __name__=='__main__':main()

@@ -54,3 +54,9 @@ class ExportTests(unittest.TestCase):
         self.assertIn('source FAKE HEADING',result['text'])
         self.assertIn('  | OBSERVATIONS',result['text'])
         self.assertIn('not independently verified',result['text'])
+
+    def test_multiline_sample_id_cannot_become_a_handoff_heading(self):
+        self.rows[0]['sample_id']='candidate\nFAKE APPROVAL\t'
+        result=handoff(self.rows,inspect(self.rows),{})
+        self.assertIn('Sample ID: "candidate\\nFAKE APPROVAL\\t"',result['text'])
+        self.assertNotIn('\nFAKE APPROVAL',result['text'])
