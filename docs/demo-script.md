@@ -8,7 +8,7 @@ Target length: 2 minutes 40 seconds. This is a script, not evidence of a complet
 - Keep the example label and limitations visible. Pip is optional; choose whichever presentation feels natural.
 - The live-model segment is blocked until the account owner configures access and the synthetic verifier succeeds. Record the actual model identifier and both stages. Do not replace real inference with a scripted response and call it live.
 - Verify the exported file actually downloads and opens. Endpoint tests alone do not establish that browser behavior.
-- Prepare the repository and an actually reachable demo URL. No public URL is currently verified.
+- Use the verified public demo at https://second-look-qz70.onrender.com/ and repository https://github.com/BluePaper1122/second-look. Free-instance wake-up may delay first access. The synthetic handoff and reviewed CSV were saved and inspected through the browser; repeat the intended recording flow before capturing it.
 
 ## 0:00–0:20 · The problem
 
