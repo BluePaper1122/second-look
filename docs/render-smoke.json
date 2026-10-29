@@ -8,6 +8,7 @@
     "cross_origin_rejected": true,
     "security_headers_present": true,
     "synthetic_layout_allocated": true,
+    "coverage_counts_present_and_correct": true,
     "unreviewed_export_rejected": true,
     "reviewed_csv_received_and_parsed": true,
     "export_metadata_preserved": true,

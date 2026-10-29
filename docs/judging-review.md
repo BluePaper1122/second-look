@@ -34,3 +34,5 @@ Use 1 for unsupported/incomplete evidence, 3 for a coherent demonstrated impleme
 4. **Demonstrate rather than decorate:** keep the interface descriptive and Pip optional. No invented impact statistics, unsupported global uniqueness, simulated live responses, or score inflation.
 
 The before/after coverage display is a useful product explanation and differentiator within this limited comparison; it is not a claim of a novel statistical method. Final judging evidence must describe the actually deployed revision and observed behavior.
+
+For a genuinely external usability check and a more consistent comparison procedure, use [independent review](independent-review.md). That procedure is prepared but has not been executed; no independent verdict is claimed.

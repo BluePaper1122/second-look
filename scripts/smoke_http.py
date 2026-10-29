@@ -64,6 +64,7 @@ def main():
         stale=json.loads(raw)
         checks.update({
             'synthetic_layout_allocated':plan_status==200 and layout.get('used')==16,
+            'coverage_counts_present_and_correct':len(layout.get('coverage',{}).get('materials',[]))==4 and layout['coverage']['samples_gaining_coverage']==2 and all(m['proposed']=={'edge':2,'interior':2} and m['observed']['edge']==sum(r['sample_id']==m['sample_id'] and r['control']==m['role'] and (r['well'][0] in 'AH' or int(r['well'][1:]) in (1,12)) for r in report['rows']) for m in layout['coverage']['materials']),
             'unreviewed_export_rejected':blocked_status==400 and blocked.get('code')=='review_required',
             'reviewed_csv_received_and_parsed':export_status==200 and len(allocations)==16,
             'export_metadata_preserved':bool(allocations) and all(

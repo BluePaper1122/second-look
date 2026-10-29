@@ -1,6 +1,6 @@
 # Second Look
 
-Review a 96-well assay plate and plan a follow-up that checks whether sample position could explain a result.
+Review a 96-well assay plate and plan a follow-up that checks whether sample position could explain a result. The proposed layout includes a before/after coverage table: inspect the original and proposed edge/interior counts and exact wells for each selected material, without predicting experimental outcomes.
 
 **Demo:** https://second-look-qz70.onrender.com/ (Free Render instance; may take about a minute to wake). Use the included examples for review.
 
