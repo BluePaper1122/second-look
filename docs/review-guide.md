@@ -10,7 +10,7 @@ This is a reviewable research prototype. It is not yet ready for a final submiss
 4. Select both candidate samples, retain the two measured control materials, and design a follow-up with a 24-well budget. Expect 16 allocated wells: four per sample and four per control.
 5. Export a handoff before checking review. Its draft well assignments should be omitted. After reviewing assay compatibility, export the CSV. Check source/layout IDs, seed, budget, and review status.
 6. Change the budget or seed. The previous layout and approval should clear. Generate and review again.
-7. Add a note and save a review file. Reopen it: measurements and settings return, but conclusions are recalculated and approval/model responses are not restored.
+7. Add a note, switch to another example and inspect: its notes should be separate. Return to the original example and inspect to recover the draft within this tab. Editing a note should remove any prepared download. Save a review file before reload/close. Reopen it: measurements and settings return, but conclusions are recalculated and approval/model responses are not restored.
 8. Load the labeled real calibration example. Expect 48 measurements, no invented controls, no Z-prime, and no follow-up allocation until control information exists.
 9. Toggle Pip off if preferred. The scientific workflow should remain understandable.
 

@@ -18,7 +18,7 @@ For local use, run `python3 start.py` from the repository folder with Python 3.1
 
 ## Verified evidence
 
-- 100 automated tests passed, including recovery/error paths and export validation.
+- 100 Python tests passed, including recovery/error paths and export validation. Three additional Node tests cover note isolation, restoration/import replacement and invalid-update preservation.
 - 140 held-out-seed synthetic integrity cases passed. These are development checks, not a blinded biological or model-performance benchmark.
 - All 11 synthetic HTTPS checks passed on the public Render origin; no inference calls were made.
 - Actual synthetic handoff and reviewed CSV files were saved through the browser and inspected. Source/layout metadata and 16 unique CSV wells were verified.
