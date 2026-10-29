@@ -4,6 +4,7 @@ import hashlib
 import json
 from assay import plan,csv_export
 from errors import AppError
+from design_coverage import position_coverage
 from workflow import ANALYSIS_VERSION,decision_summary
 
 
@@ -18,7 +19,7 @@ def prepare_plan(rows,report,data):
     source_id=decision_summary(report,rows)['report_id']
     identity={'source_report_id':source_id,'rows':result['rows'],'budget':result['budget'],'seed':result['seed']}
     layout_id=hashlib.sha256(json.dumps(identity,sort_keys=True,separators=(',',':')).encode()).hexdigest()[:16]
-    return {**result,'csv':csv_export(result['rows']),'source_report_id':source_id,'layout_id':layout_id}
+    return {**result,'coverage':position_coverage(rows,result['rows'],ids,controls),'csv':csv_export(result['rows']),'source_report_id':source_id,'layout_id':layout_id}
 
 
 def reviewed_plan(rows,report,data):
@@ -69,7 +70,10 @@ def handoff(rows,report,data):
         result=reviewed_plan(rows,report,data)
         lines.extend(['','REVIEWED FOLLOW-UP PROPOSAL','Layout: '+result['layout_id'],
                       'Source report: '+result['source_report_id'],'Exported at UTC: '+result['exported_at_utc'],
-                      result['review_notice'],result['explanation'],result['csv']])
+                      result['review_notice'],result['explanation'],'','OBSERVED VERSUS PROPOSED POSITION COVERAGE',result['coverage']['summary'],result['coverage']['limits']])
+        for material in result['coverage']['materials']:
+            lines.append(json.dumps(material,ensure_ascii=True))
+        lines.extend(['','REVIEWED ALLOCATION CSV',result['csv']])
         included=True
     elif data.get('layout_present'):
         lines.extend(['','UNREVIEWED FOLLOW-UP DRAFT','A draft exists in the application. Its well assignments were omitted because review was not attested. Review the current layout before exporting those assignments.'])

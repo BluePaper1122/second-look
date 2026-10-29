@@ -18,7 +18,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -33,7 +35,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -48,7 +52,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -63,7 +69,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -78,7 +86,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -93,7 +103,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -108,7 +120,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -123,7 +137,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -138,7 +154,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -153,7 +171,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -168,7 +188,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -183,7 +205,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -198,7 +222,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -213,7 +239,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -228,7 +256,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -243,7 +273,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -258,7 +290,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -273,7 +307,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -288,7 +324,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -303,7 +341,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -318,7 +358,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -333,7 +375,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -348,7 +392,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -363,7 +409,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -378,7 +426,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -393,7 +443,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -408,7 +460,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -423,7 +477,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -438,7 +494,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -453,7 +511,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -468,7 +528,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -483,7 +545,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -498,7 +562,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -513,7 +579,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -528,7 +596,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -543,7 +613,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -558,7 +630,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -573,7 +647,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -588,7 +664,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -603,7 +681,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -618,7 +698,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -633,7 +715,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -648,7 +732,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -663,7 +749,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -678,7 +766,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -693,7 +783,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -708,7 +800,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -723,7 +817,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -738,7 +834,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -753,7 +851,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -768,7 +868,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -783,7 +885,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -798,7 +902,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -813,7 +919,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -828,7 +936,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -843,7 +953,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -858,7 +970,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -873,7 +987,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -888,7 +1004,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -903,7 +1021,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -918,7 +1038,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -933,7 +1055,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -948,7 +1072,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -963,7 +1089,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -978,7 +1106,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -993,7 +1123,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1008,7 +1140,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1023,7 +1157,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1038,7 +1174,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1053,7 +1191,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1068,7 +1208,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1083,7 +1225,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1098,7 +1242,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1113,7 +1259,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1128,7 +1276,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1143,7 +1293,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1158,7 +1310,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1173,7 +1327,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1188,7 +1344,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1203,7 +1361,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1219,7 +1379,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1235,7 +1397,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1251,7 +1415,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1267,7 +1433,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1283,7 +1451,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1299,7 +1469,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1315,7 +1487,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1331,7 +1505,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1347,7 +1523,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1363,7 +1541,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1379,7 +1559,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1395,7 +1577,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1411,7 +1595,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1427,7 +1613,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1443,7 +1631,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1459,7 +1649,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1475,7 +1667,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1491,7 +1685,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1507,7 +1703,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1523,7 +1721,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1758,7 +1958,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1773,7 +1975,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1788,7 +1992,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1803,7 +2009,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1818,7 +2026,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1833,7 +2043,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1848,7 +2060,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1863,7 +2077,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1878,7 +2094,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1893,7 +2111,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1908,7 +2128,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1923,7 +2145,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1938,7 +2162,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1953,7 +2179,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1968,7 +2196,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1983,7 +2213,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -1998,7 +2230,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -2013,7 +2247,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -2028,7 +2264,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     },
@@ -2043,7 +2281,9 @@
         "only_selected_materials_and_balanced_zones": true,
         "exact_template_well_count": true,
         "measured_control_roles_preserved": true,
-        "selection_order_invariant": true
+        "selection_order_invariant": true,
+        "coverage_matches_observed_wells": true,
+        "coverage_matches_proposed_wells": true
       },
       "passed": true
     }

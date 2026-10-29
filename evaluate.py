@@ -44,6 +44,8 @@ def main():
                     'exact_template_well_count': len(allocations) == 4 * len(samples) + 8,
                     'measured_control_roles_preserved': all(r['control'] == next((role for role, material in controls.items() if r['sample_id'] == material), 'sample') for r in allocations),
                     'selection_order_invariant': prepare_plan(rows, report, {**settings, 'samples': list(reversed(samples))})['layout_id'] == layout['layout_id'],
+                    'coverage_matches_observed_wells': all(m['observed'][zone] == sum(r['sample_id']==m['sample_id'] and r['control']==m['role'] and edge(r['well'])==flag for r in rows) for m in layout['coverage']['materials'] for zone,flag in (('edge',True),('interior',False))),
+                    'coverage_matches_proposed_wells': all(m['proposed'][zone] == sum(r['sample_id']==m['sample_id'] and r['control']==m['role'] and edge(r['well'])==flag for r in allocations) for m in layout['coverage']['materials'] for zone,flag in (('edge',True),('interior',False))),
                 })
             results.append({'scenario': kind, 'seed': seed, 'checks': checks, 'passed': all(checks.values())})
     summary = {

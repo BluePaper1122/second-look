@@ -32,7 +32,7 @@ Use the actual screen to describe what this particular response did. Do not prom
 
 ## 1:30–2:10 · Plan a concrete follow-up
 
-Show both selected samples, the named negative and positive controls, budget 24 and seed 11. Generate, inspect the well list, then explicitly review compatibility.
+Show both selected samples, the named negative and positive controls, budget 24 and seed 11. Generate, show **What changes in this repeat?**, inspect the observed/proposed counts and well lists, then explicitly review compatibility.
 
 “For these two samples, this template uses 16 wells. Each sample and each control gets two edge wells and two interior wells. Eight budgeted wells remain unused. The seed makes the layout reproducible. This design checks a position explanation; it does not balance every biological factor or replace independent biological replication. The researcher must review assay compatibility before exporting.”
 

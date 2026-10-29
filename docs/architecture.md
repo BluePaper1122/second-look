@@ -12,6 +12,7 @@ Use [design decisions](design-decisions.md) for the reasons and tradeoffs, [firs
 | `gateway.py`, `serve.py` | WSGI transport and maintained HTTP serving | Exact origin/Host, headers, body/rate/concurrency limits; managed TLS belongs to host |
 | `local_config.py`, `setup_nebius.py` | Explicit, hidden local credential entry and restricted loading | No shell evaluation or echoed fallback; no secrets in exports; hosted process uses environment secrets |
 | `review_file.py` | Validate portable sessions and reanalyze original data | Saved conclusions, model responses and approval are not trusted or restored |
+| `design_coverage.py` | Compare observed and proposed position-zone coverage with exact supporting wells | Structural coverage only; no predicted response, causal proof or power claim |
 | `exports.py` | Recompute reviewed proposals and create traceable handoffs | Reject stale settings; omit unreviewed assignments; quote IDs and separate user notes |
 | `static/drafts.js` | Keep each inspected report’s notes separate in tab memory | No browser/database persistence; save before reload/close; explicit import replaces active notes |
 | `static/app.js` | Present measurements and maintain browser state | Settings invalidate proposals; async operations lock inputs; model failure preserves local results and clears old model output |
