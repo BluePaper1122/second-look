@@ -1,5 +1,6 @@
 {
   "origin": "https://second-look-qz70.onrender.com",
+  "request_timeout_seconds": 90.0,
   "checks": {
     "health_responds": true,
     "head_without_body": true,

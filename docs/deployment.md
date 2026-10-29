@@ -55,3 +55,7 @@ Build/test the image in the selected host's environment, set the real HTTPS orig
 These deployment controls do not make the tool clinically validated, compliant with any particular regulation, or suitable for unapproved private datasets. The default demo should use the included clearly labeled examples.
 
 Sources: [Waitress arguments](https://docs.pylonsproject.org/projects/waitress/en/stable/arguments.html), [Waitress release](https://pypi.org/project/waitress/3.0.2/). The standard-library local server remains a development convenience; hosted traffic uses the WSGI gateway.
+
+## Rechecking an idle Free instance
+
+Run `python3 scripts/smoke_http.py --url https://second-look-qz70.onrender.com --timeout 90` to allow time for an idle service to wake. The default eight-second timeout remains useful for local/warm checks. A late October 28 check exceeded the short timeout; the subsequent explicit 90-second-budget check passed all 11 assertions, with no model calls. This is consistent with documented cold-start behavior but does not prove the cause of the first timeout. The utility does not automatically retry. Investigate repeated failures after the wake-up allowance rather than treating every outage as a cold start.

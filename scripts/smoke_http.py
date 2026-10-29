@@ -18,7 +18,9 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--url',default='http://127.0.0.1:8088')
     parser.add_argument('--output',type=Path)
+    parser.add_argument('--timeout',type=float,default=8,help='Per-request seconds (1–120). Use 90 for an idle Free Render instance; no automatic retries.')
     args=parser.parse_args()
+    if not 1<=args.timeout<=120:parser.error('--timeout must be from 1 to 120 seconds.')
     origin=args.url.rstrip('/')
     parts=urllib.parse.urlsplit(origin)
     if parts.username or parts.password or parts.path or parts.query or parts.fragment or (parts.scheme!='https' and not(parts.scheme=='http' and parts.hostname in ('localhost','127.0.0.1'))):
@@ -27,7 +29,7 @@ def main():
         body=json.dumps(payload).encode() if payload is not None else None
         headers={'Content-Type':'application/json'};headers.update(extra_headers or {})
         req=urllib.request.Request(origin+path,data=body,headers=headers,method=method)
-        try:response=urllib.request.urlopen(req,timeout=8,context=tls_context())
+        try:response=urllib.request.urlopen(req,timeout=args.timeout,context=tls_context())
         except urllib.error.HTTPError as e:response=e
         with response:
             raw=response.read(1_500_001)
@@ -72,10 +74,10 @@ def main():
                 and 'UNREVIEWED FOLLOW-UP DRAFT' in handoff.get('text','') and 'technical_replicate' not in handoff.get('text',''),
             'stale_export_rejected':stale_status==409 and stale.get('code')=='stale_layout',
         })
-        result={'origin':origin,'checks':checks,'passed':all(checks.values()),'model_configured':bool(health.get('model_configured')),
+        result={'origin':origin,'request_timeout_seconds':args.timeout,'checks':checks,'passed':all(checks.values()),'model_configured':bool(health.get('model_configured')),
                 'live_model_calls':0,'scope':'HTTP serving and synthetic data flow at the recorded origin only; does not establish ongoing availability, live-model quality, load capacity, a security audit, or biological validity.'}
     except (OSError,ValueError,KeyError,urllib.error.URLError):
-        result={'origin':origin,'passed':False,'live_model_calls':0,'message':'The serving check could not complete. Confirm the process, configured origin and port, and retry.'}
+        result={'origin':origin,'request_timeout_seconds':args.timeout,'passed':False,'live_model_calls':0,'message':'The serving check could not complete. Confirm the process, configured origin and port, and retry.'}
     if args.output:
         args.output.parent.mkdir(parents=True,exist_ok=True)
         args.output.write_text(json.dumps(result,indent=2)+'\n')
