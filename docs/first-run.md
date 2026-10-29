@@ -6,7 +6,7 @@
 4. Read **Sample identity and position may be entangled**. Expand its supporting measurements. Select a well to see its exact value; an unmeasured position is not zero.
 5. Select both candidate samples under follow-up design. Keep the measured control materials, budget 24, and seed 11. Click **Design follow-up**. The template should allocate 16 wells and leave eight unused.
 6. Inspect the assignments and compatibility limitations. Only attest review if you have actually reviewed the proposal. Then export the CSV. A prepared-file link lets you retry if automatic saving is blocked.
-7. Add any context to **Researcher notes**, then **Save review file** before closing the tab. The file includes original data and notes; store it appropriately. Reopening recalculates findings and resets approval. No account or silent server-side save is provided.
+7. Add any context to **Researcher notes**, then **Save review file** before closing or reloading the tab. Notes stay separate for different inspected reports; revisiting the same report in the current tab restores its draft. Editing notes clears any prepared download that contains older text. The file includes original data and notes; store it appropriately. Reopening recalculates findings and resets approval. No account or silent server-side save is provided.
 
 The optional model review is a separate step. It sends a computed QC summary, including sample IDs, to Nebius only when requested. Follow [secure setup](secure-setup.md) for live use. Local QC and planning work without it.
 

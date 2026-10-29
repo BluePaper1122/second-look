@@ -19,6 +19,7 @@ The launcher opens http://127.0.0.1:8765 and explains how to stop the server. Us
 ```sh
 python3 -m unittest discover -s tests -v
 python3 evaluate.py
+node --test tests/browser/drafts.test.js
 ```
 
 ## Workflow
@@ -27,7 +28,7 @@ python3 evaluate.py
 2. Confirm the column mapping; inspect raw values and evidence-linked QC findings.
 3. Optionally select a review objective and request a bounded Nemotron analysis workflow. Use the follow-up controls to select the samples, control materials, and budget it may inspect.
 4. Select sample IDs and a well budget. Review the proposed layout before CSV export.
-5. Add researcher notes and save a portable review file, or export a handoff note documenting observations and uncertainty.
+5. Add researcher notes (kept separate by report within the current tab) and save a portable review file before reload/close, or export a handoff note documenting observations and uncertainty.
 6. Reopen a saved `.secondlook.json` file to recompute the report and restore notes, mappings, sample choices, controls, budget, and seed. Model responses and layout approval are not restored. Invalid files leave the current review intact.
 
 Required fields: `plate_id,well,sample_id,value,control`. Well positions are A01–H12; control roles are `sample`, `negative`, or `positive`. Each well appears once. Use the same sample ID for repeated measurements of the same material; use distinct IDs for distinct controls. Technical replicates are not assumed to be independent biological replicates. Inspect one plate and one measurement channel at a time.

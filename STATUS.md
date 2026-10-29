@@ -1,10 +1,11 @@
 # Second Look — implementation status
 
-Updated October 28, 2026 (America/Chicago).
+Updated October 29, 2026 (America/Chicago).
 
 ## Working now
 
 - Python standard-library local server and responsive browser interface. `python3 start.py` provides a browser-opening launcher, readable startup/stop instructions, port validation, and an explicit no-browser mode. Actual no-browser startup and page loading were verified on an isolated port; automated opening in the default browser was not exercised. See docs/first-run.md.
+- Report-specific note drafts now prevent one plate’s context from carrying into another report. Drafts survive switching back to the same report in the current tab, but are not persisted across reload/close. Editing notes clears stale prepared downloads. Verified with three Node tests and direct browser isolation/restoration/download-invalidation checks; all 100 Python tests also passed.
 - Handoff sample IDs use escaped quoted text so embedded newlines cannot masquerade as report headings. Starting a fresh model request clears the old model result, preventing a failed retry from leaving a previous response beside an unavailable status.
 - Shared route layer plus a separate WSGI deployment gateway, exact origin/Host checks, request limits, security headers, and a hash-pinned Waitress launcher. Actual Waitress HTTP serving was verified on loopback with synthetic inspection, HEAD, health, headers, and cross-origin rejection. The expanded smoke check also received and parsed a 16-row reviewed CSV, verified its trace metadata, rejected missing review and stale settings, and confirmed that unreviewed handoffs omit assignments. All 11 HTTP checks passed with zero inference calls. The public Render HTTPS origin subsequently passed the same checks, and actual browser exports were saved and inspected.
 - Secure interactive local Nebius setup with hidden entry, atomic user-only configuration, explicit loading, no shell execution, and ignored secret files. No real credentials were entered. Production uses host environment secrets only.

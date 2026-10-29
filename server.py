@@ -155,13 +155,13 @@ class APIRoutes:
                 self.send({'csv':example(kind),'synthetic':True})
         elif parsed.path=='/api/status':
             self.send({'model_configured':bool(os.getenv('NEBIUS_API_KEY') and os.getenv('NEBIUS_MODEL')),'model_runtime_verification':'not_checked_by_health_endpoint','analysis_version':ANALYSIS_VERSION})
-        elif parsed.path in ('/','/app.js','/style.css'):
-            file=ROOT/'static'/{'/':'index.html','/app.js':'app.js','/style.css':'style.css'}[parsed.path]
+        elif parsed.path in ('/','/app.js','/drafts.js','/style.css'):
+            file=ROOT/'static'/{'/':'index.html','/app.js':'app.js','/drafts.js':'drafts.js','/style.css':'style.css'}[parsed.path]
             try:
                 content=file.read_bytes()
             except OSError:
                 raise AppError('asset_unavailable','An application file is unavailable. Restore the project files and restart.',503) from None
-            self.send(content,mime={'/':'text/html; charset=utf-8','/app.js':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[parsed.path])
+            self.send(content,mime={'/':'text/html; charset=utf-8','/app.js':'text/javascript; charset=utf-8','/drafts.js':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[parsed.path])
         else:
             raise AppError('not_found','This page or API endpoint does not exist.',404)
     def post(self):
