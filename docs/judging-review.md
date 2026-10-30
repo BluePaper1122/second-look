@@ -4,7 +4,7 @@ This is a builder self-review, not an unbiased panel, official score, representa
 
 ## Eligibility before scoring
 
-The [official rules](https://nebiusglobalaihackathon.devpost.com/rules) require a functioning Nebius runtime integration with an NVIDIA open model. Our code implements two-stage inference, but no successful real call is verified. Treat this as a blocked baseline gate, regardless of the quality of local QC or hosting. A public YouTube demonstration shorter than three minutes and final user entry review are also outstanding. Submission closes October 30 at 10:00am Pacific / noon Chicago. Verify eligibility with the entrant; do not infer it from account access. Keep judge access free through the stated judging period ending December 15.
+The [official rules](https://nebiusglobalaihackathon.devpost.com/rules) require a functioning Nebius runtime integration with an NVIDIA open model. One real synthetic two-stage inference passed; a subsequent browser run failed format validation and was rejected. Treat reliable live demonstration and judge model access as blocked baseline gates, regardless of local QC or hosting. A public YouTube demonstration shorter than three minutes and final user entry review are also outstanding. Submission closes October 30 at 10:00am Pacific / noon Chicago. Verify eligibility with the entrant; do not infer it from account access. Keep judge access free through the stated judging period ending December 15.
 
 The four equally weighted criteria are technical implementation, design, potential impact and idea quality. The organizer’s [judging update](https://nebiusglobalaihackathon.devpost.com/updates/46204-here-s-how-judging-works) favors useful multi-step workflows over superficial wrappers.
 
@@ -14,7 +14,7 @@ Use 1 for unsupported/incomplete evidence, 3 for a coherent demonstrated impleme
 
 | Criterion | Current evidence | Internal provisional range | What would change it |
 |---|---|---|---|
-| Technical implementation | Deterministic QC, read-only tool chain, constrained model schemas, export/recovery checks, public HTTPS app; live provider path unverified | 1–2 / 5 | Successful live use, inspected results, and a measured comparison with local QC |
+| Technical implementation | Deterministic QC, read-only tool chain, constrained model schemas, export/recovery checks, public HTTPS app; one live two-stage synthetic success and a rejected invalid-output browser run | 2–3 / 5 | Successful live use, inspected results, and a measured comparison with local QC |
 | Design | Working input → evidence → chosen follow-up → reviewed export → portable review flow; keyboard map; notes separated by report | 3–4 / 5 | Independent first-use observation, broader accessibility checks, final video |
 | Potential impact | Specific position-confounding problem and concrete layout constraints; no user study, measured lab savings or biological validation | 2–3 / 5 | Domain feedback and a small, honest task-completion comparison |
 | Idea quality | Connects evidence limitations to a reproducible repeat and inspectable before/after design coverage; underlying QC methods are established | 3 / 5 | Demonstrated model contribution and a researcher explaining why this workflow helps |

@@ -22,4 +22,4 @@ Live NVIDIA/Nebius verification is still required for the hackathon. A working l
 
 If you prefer not to store the key in this folder, use secure process environment configuration instead. Do not put the key in a command-line argument, a screenshot, a review file, or a public repository. `.env.local` is never included in handoff/review exports. Account-level spending controls should be configured in Nebius before any public deployment; application call limits are not a monetary spending cap.
 
-No key has been configured by the developer, and no successful live inference has been claimed. This guide is the remaining account-specific step the account owner must perform.
+October 29 update: with specific user approval, a named project key was created and saved only in the ignored local `.env.local` file with user-only permissions. One real synthetic two-stage review passed; a subsequent local browser run failed format validation and was rejected. No key was added to Render. Do not rerun billable checks without accounting for the approved cumulative allowance.

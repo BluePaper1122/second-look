@@ -6,7 +6,7 @@ Target length: 2 minutes 40 seconds. This is a script, not evidence of a complet
 
 - Run the app and rehearse the review-guide steps.
 - Keep the example label and limitations visible. Pip is optional; choose whichever presentation feels natural.
-- The live-model segment is blocked until the account owner configures access and the synthetic verifier succeeds. Record the actual model identifier and both stages. Do not replace real inference with a scripted response and call it live.
+- Local credentials are configured and one synthetic verifier run succeeded, but a subsequent browser review failed format validation. The successful on-screen segment remains blocked until reliability is addressed and rendering is verified. Record the actual model identifier and both stages. Do not replace real inference with a scripted response and call it live.
 - Verify the exported file actually downloads and opens. Endpoint tests alone do not establish that browser behavior.
 - Use the verified public demo at https://second-look-qz70.onrender.com/ and repository https://github.com/BluePaper1122/second-look. Free-instance wake-up may delay first access. The synthetic handoff and reviewed CSV were saved and inspected through the browser; repeat the intended recording flow before capturing it.
 
@@ -22,7 +22,7 @@ Load **Confounded sample layout**, inspect, select one edge well and one interio
 
 “This example is synthetic. The map shows raw measurements, and each well exposes its exact value. The findings point to the measurements used in the calculation. Here the sample identities and position zones overlap. The app reports that limitation; it does not correct the values or declare an artifact.”
 
-## 0:55–1:30 · Verified live investigation, pending
+## 0:55–1:30 · Live investigation — successful rendering still pending
 
 Only after live verification: select the relevant samples, choose **Investigate selected samples by position**, request the review, then show the returned computed evidence and next step.
 

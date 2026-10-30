@@ -1,0 +1,46 @@
+{
+  "verified_at_utc": "2026-10-30T01:52:11.220603+00:00",
+  "mode": "live",
+  "provider": "Nebius Token Factory",
+  "endpoint": "https://api.tokenfactory.nebius.com/v1/chat/completions",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "data": "generated synthetic confounded plate, seed 11",
+  "source_report_id": "e2706ae91cba8290",
+  "runtime_calls": 2,
+  "agent_version": "0.1.1",
+  "schema_and_evidence_checks_passed": true,
+  "analyses": [
+    {
+      "id": "analysis_1",
+      "name": "sample_position",
+      "status": "needs_data"
+    },
+    {
+      "id": "analysis_2",
+      "name": "control_pair",
+      "status": "available"
+    }
+  ],
+  "selected_evidence": [
+    "analysis_1",
+    "analysis_2"
+  ],
+  "selected_findings": [
+    "confounding"
+  ],
+  "selected_next_action": {
+    "title": "Review the evidence with the responsible researcher",
+    "detail": "The researcher decides which interpretation and follow-up are appropriate. The app does not convert a model preference or a QC metric into a biological conclusion.",
+    "evidence": []
+  },
+  "limits": "One synthetic two-stage review passed structural/schema and evidence checks. It does not establish model usefulness, biological validity, broad reliability or public model availability. No private assay data was used. A subsequent browser run failed format validation; do not treat the initial success as a reliability benchmark.",
+  "subsequent_local_browser_check": {
+    "accepted": false,
+    "error_code": "model_response_invalid",
+    "visible_message": "The model response did not follow the required format. No model result was accepted.",
+    "deterministic_findings_preserved": true,
+    "successful_live_rendering_verified": false,
+    "attempts_reserved_upper_bound": 2
+  },
+  "approved_session_attempts_upper_bound": 4
+}

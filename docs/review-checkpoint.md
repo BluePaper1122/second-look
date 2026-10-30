@@ -1,6 +1,6 @@
-# Review checkpoint — October 28, 2026
+# Review checkpoint — October 29, 2026
 
-**Status:** runnable, publicly reviewable research prototype; approximately 85% submission-ready by development estimate. This checkpoint is incomplete. It is not a submitted entry, scientific validation, or verified live-AI demonstration.
+**Status:** runnable, publicly reviewable research prototype; approximately 85% submission-ready by development estimate. This checkpoint is incomplete. It is not a submitted entry or scientific validation. One synthetic live review passed, but a later browser review failed format validation; successful live rendering remains a blocker.
 
 ## Try it
 
@@ -20,14 +20,14 @@ For local use, run `python3 start.py` from the repository folder with Python 3.1
 
 - 103 Python tests passed, including recovery/error paths and export validation. Three additional Node tests cover note isolation, restoration/import replacement and invalid-update preservation.
 - 140 held-out-seed synthetic integrity cases passed. These are development checks, not a blinded biological or model-performance benchmark.
-- All 11 synthetic HTTPS checks passed on the public Render origin; no inference calls were made.
+- All 12 synthetic HTTPS checks passed on the public Render origin; no inference calls were made.
 - Actual synthetic handoff and reviewed CSV files were saved through the browser and inspected. Source/layout metadata and 16 unique CSV wells were verified.
 - Keyboard navigation and scoped 390/1280-pixel horizontal containment were checked. Full assistive-technology conformance remains unverified.
 - A 48-measurement real calibration compatibility case preserves source data and abstains from invented assay-control roles. It is not biological validation.
 
 ## Still required
 
-1. Owner configures Nebius securely; successful two-stage live NVIDIA review and its rendering/recovery must be verified. Do not put a key in chat, GitHub, or a recording.
+1. Local credentials are configured with user approval. One real two-stage synthetic review passed; the next browser run rejected invalid model output and preserved findings. Resolve reliability and verify successful rendering. Public model access is not authorized or enabled. Do not put a key in chat, GitHub, or a recording.
 2. Evaluate usefulness against the deterministic baseline and obtain relevant domain review. No model usefulness or assay-validity claim is currently supported.
 3. Record and review the actual public video, finalize submission fields and eligibility checks, and reserve time for user approval. No entry will be submitted automatically.
 4. Review hosting/provider usage controls and monitor judge access. The Free compute selection does not eliminate all workspace quotas or possible overages; no paid compute plan was selected.
